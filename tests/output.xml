@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240124 19:00:55.728" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCaseSet" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\TestCaseSet.robot">
+<test id="s1-t1" name="createAPI1.0bot" line="45">
+<kw name="Setup Webdriver" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 19:00:55.936" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001C465F91CF0&gt;</msg>
+<status status="PASS" starttime="20240124 19:00:55.935" endtime="20240124 19:00:55.936"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.936" endtime="20240124 19:00:55.936"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.936" endtime="20240124 19:00:55.936"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.937" endtime="20240124 19:00:55.937"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.937" endtime="20240124 19:00:55.937"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.937" endtime="20240124 19:00:55.937"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:00:55.937" endtime="20240124 19:00:55.937"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 19:00:55.938" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240124 19:00:55.937" endtime="20240124 19:00:57.131"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240124 19:00:57.131" endtime="20240124 19:00:57.132"/>
+</kw>
+<status status="PASS" starttime="20240124 19:00:55.935" endtime="20240124 19:00:57.132"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${my_api10_bot_name}</var>
+<arg>test_bot</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240124 19:00:57.133" level="INFO">${my_api10_bot_name} = test_bot</msg>
+<status status="PASS" starttime="20240124 19:00:57.132" endtime="20240124 19:00:57.133"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${checkbox_values}</var>
+<arg>crm</arg>
+<arg>events</arg>
+<arg>coupons</arg>
+<arg>catalog</arg>
+<arg>rms</arg>
+<arg>chat</arg>
+<arg>ec</arg>
+<arg>mail</arg>
+<arg>stores</arg>
+<arg>campaign</arg>
+<arg>elgana</arg>
+<arg>g_events</arg>
+<arg>bot_posts</arg>
+<arg>user_logs</arg>
+<arg>linepoints</arg>
+<arg>sfa_salesforce</arg>
+<arg>sfa_hubspot</arg>
+<arg>lp</arg>
+<arg>stamp_card</arg>
+<arg>ms365</arg>
+<arg>files</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240124 19:00:57.134" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
+<status status="PASS" starttime="20240124 19:00:57.133" endtime="20240124 19:00:57.134"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${h1_locator}</var>
+<arg>//h1[@class='header-bot-name']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240124 19:00:57.134" level="INFO">${h1_locator} = //h1[@class='header-bot-name']</msg>
+<status status="PASS" starttime="20240124 19:00:57.134" endtime="20240124 19:00:57.134"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${environment}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 19:00:57.134" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 19:00:57.134" endtime="20240124 19:01:14.827"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${email_input}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:14.828" endtime="20240124 19:01:14.857"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:14.857" endtime="20240124 19:01:14.886"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:14.827" endtime="20240124 19:01:14.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_input}</arg>
+<arg>${credentials}[email]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:14.887" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240124 19:01:14.887" endtime="20240124 19:01:14.997"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${pass_input}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:14.998" endtime="20240124 19:01:15.021"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:15.022" endtime="20240124 19:01:15.048"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:14.998" endtime="20240124 19:01:15.048"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pass_input}</arg>
+<arg>${credentials}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:15.048" level="INFO">Typing text '221373897221373897qW!' into text field '//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20240124 19:01:15.048" endtime="20240124 19:01:15.146"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${submit_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:15.147" endtime="20240124 19:01:15.167"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:15.167" endtime="20240124 19:01:15.190"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:15.146" endtime="20240124 19:01:15.190"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:15.190" level="INFO">Clicking button '//button[@type='text']'.</msg>
+<status status="PASS" starttime="20240124 19:01:15.190" endtime="20240124 19:01:15.246"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${new_app_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:15.247" endtime="20240124 19:01:20.686"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:20.686" endtime="20240124 19:01:20.708"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:15.246" endtime="20240124 19:01:20.708"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${new_app_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:20.709" level="INFO">Clicking button '//button[text()[contains(.,'New App')]]'.</msg>
+<status status="PASS" starttime="20240124 19:01:20.708" endtime="20240124 19:01:20.798"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${new_bot_name}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:20.799" endtime="20240124 19:01:20.835"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:20.836" endtime="20240124 19:01:20.871"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:20.798" endtime="20240124 19:01:20.871"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_bot_name}</arg>
+<arg>${my_api10_bot_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:20.872" level="INFO">Typing text 'test_bot' into text field '//input[@name='name']'.</msg>
+<status status="PASS" starttime="20240124 19:01:20.871" endtime="20240124 19:01:21.039"/>
+</kw>
+<for flavor="IN">
+<var>${value}</var>
+<value>@{checkbox_values}</value>
+<iter>
+<var name="${value}">crm</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.041" level="INFO">Clicking element '//input[@value='crm']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.040" endtime="20240124 19:01:21.135"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.040" endtime="20240124 19:01:21.135"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.039" endtime="20240124 19:01:21.135"/>
+</iter>
+<iter>
+<var name="${value}">events</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.136" level="INFO">Clicking element '//input[@value='events']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.136" endtime="20240124 19:01:21.196"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.135" endtime="20240124 19:01:21.196"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.135" endtime="20240124 19:01:21.196"/>
+</iter>
+<iter>
+<var name="${value}">coupons</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.198" level="INFO">Clicking element '//input[@value='coupons']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.197" endtime="20240124 19:01:21.263"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.196" endtime="20240124 19:01:21.263"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.196" endtime="20240124 19:01:21.263"/>
+</iter>
+<iter>
+<var name="${value}">catalog</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.266" level="INFO">Clicking element '//input[@value='catalog']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.264" endtime="20240124 19:01:21.327"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.264" endtime="20240124 19:01:21.327"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.263" endtime="20240124 19:01:21.327"/>
+</iter>
+<iter>
+<var name="${value}">rms</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.329" level="INFO">Clicking element '//input[@value='rms']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.328" endtime="20240124 19:01:21.391"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.327" endtime="20240124 19:01:21.391"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.327" endtime="20240124 19:01:21.391"/>
+</iter>
+<iter>
+<var name="${value}">chat</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.392" level="INFO">Clicking element '//input[@value='chat']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.391" endtime="20240124 19:01:21.451"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.391" endtime="20240124 19:01:21.452"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.391" endtime="20240124 19:01:21.452"/>
+</iter>
+<iter>
+<var name="${value}">ec</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.453" level="INFO">Clicking element '//input[@value='ec']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.452" endtime="20240124 19:01:21.515"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.452" endtime="20240124 19:01:21.516"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.452" endtime="20240124 19:01:21.516"/>
+</iter>
+<iter>
+<var name="${value}">mail</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.517" level="INFO">Clicking element '//input[@value='mail']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.516" endtime="20240124 19:01:21.579"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.516" endtime="20240124 19:01:21.579"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.516" endtime="20240124 19:01:21.579"/>
+</iter>
+<iter>
+<var name="${value}">stores</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.581" level="INFO">Clicking element '//input[@value='stores']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.580" endtime="20240124 19:01:21.639"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.579" endtime="20240124 19:01:21.639"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.579" endtime="20240124 19:01:21.639"/>
+</iter>
+<iter>
+<var name="${value}">campaign</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.641" level="INFO">Clicking element '//input[@value='campaign']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.640" endtime="20240124 19:01:21.699"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.639" endtime="20240124 19:01:21.700"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.639" endtime="20240124 19:01:21.700"/>
+</iter>
+<iter>
+<var name="${value}">elgana</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.701" level="INFO">Clicking element '//input[@value='elgana']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.700" endtime="20240124 19:01:21.761"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.700" endtime="20240124 19:01:21.761"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.700" endtime="20240124 19:01:21.761"/>
+</iter>
+<iter>
+<var name="${value}">g_events</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.763" level="INFO">Clicking element '//input[@value='g_events']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.762" endtime="20240124 19:01:21.837"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.762" endtime="20240124 19:01:21.837"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.762" endtime="20240124 19:01:21.837"/>
+</iter>
+<iter>
+<var name="${value}">bot_posts</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.839" level="INFO">Clicking element '//input[@value='bot_posts']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.838" endtime="20240124 19:01:21.929"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.837" endtime="20240124 19:01:21.929"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.837" endtime="20240124 19:01:21.929"/>
+</iter>
+<iter>
+<var name="${value}">user_logs</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:21.931" level="INFO">Clicking element '//input[@value='user_logs']'.</msg>
+<status status="PASS" starttime="20240124 19:01:21.930" endtime="20240124 19:01:22.010"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.930" endtime="20240124 19:01:22.010"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:21.930" endtime="20240124 19:01:22.010"/>
+</iter>
+<iter>
+<var name="${value}">linepoints</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.012" level="INFO">Clicking element '//input[@value='linepoints']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.011" endtime="20240124 19:01:22.074"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.011" endtime="20240124 19:01:22.074"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.010" endtime="20240124 19:01:22.074"/>
+</iter>
+<iter>
+<var name="${value}">sfa_salesforce</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.076" level="INFO">Clicking element '//input[@value='sfa_salesforce']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.075" endtime="20240124 19:01:22.133"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.074" endtime="20240124 19:01:22.133"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.074" endtime="20240124 19:01:22.133"/>
+</iter>
+<iter>
+<var name="${value}">sfa_hubspot</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.135" level="INFO">Clicking element '//input[@value='sfa_hubspot']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.134" endtime="20240124 19:01:22.191"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.133" endtime="20240124 19:01:22.191"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.133" endtime="20240124 19:01:22.191"/>
+</iter>
+<iter>
+<var name="${value}">lp</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.192" level="INFO">Clicking element '//input[@value='lp']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.192" endtime="20240124 19:01:22.250"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.191" endtime="20240124 19:01:22.251"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.191" endtime="20240124 19:01:22.251"/>
+</iter>
+<iter>
+<var name="${value}">stamp_card</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.252" level="INFO">Clicking element '//input[@value='stamp_card']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.252" endtime="20240124 19:01:22.307"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.251" endtime="20240124 19:01:22.307"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.251" endtime="20240124 19:01:22.307"/>
+</iter>
+<iter>
+<var name="${value}">ms365</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.308" level="INFO">Clicking element '//input[@value='ms365']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.308" endtime="20240124 19:01:22.369"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.307" endtime="20240124 19:01:22.369"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.307" endtime="20240124 19:01:22.369"/>
+</iter>
+<iter>
+<var name="${value}">files</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='${value}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.370" level="INFO">Clicking element '//input[@value='files']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.370" endtime="20240124 19:01:22.432"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.369" endtime="20240124 19:01:22.432"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.369" endtime="20240124 19:01:22.432"/>
+</iter>
+<status status="PASS" starttime="20240124 19:01:21.039" endtime="20240124 19:01:22.432"/>
+</for>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>plan</arg>
+<arg>pro</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20240124 19:01:22.433" level="INFO">Selecting 'pro' from radio button 'plan'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.432" endtime="20240124 19:01:22.509"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>apiver</arg>
+<arg>1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20240124 19:01:22.509" level="INFO">Selecting '1' from radio button 'apiver'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.509" endtime="20240124 19:01:22.580"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${company_name_input_field}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:22.581" endtime="20240124 19:01:22.606"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:22.606" endtime="20240124 19:01:22.636"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.580" endtime="20240124 19:01:22.636"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${company_name_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.637" level="INFO">Clicking element '//input[@target_name='com_id']'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.636" endtime="20240124 19:01:22.734"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${company_name_options}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:22.735" endtime="20240124 19:01:22.765"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:22.765" endtime="20240124 19:01:22.925"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:22.734" endtime="20240124 19:01:22.925"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${company_name_options}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20240124 19:01:22.926" level="INFO">Simulating Mouse Down on element '//ul[@id='form-item-autocomplete']/li'.</msg>
+<status status="PASS" starttime="20240124 19:01:22.925" endtime="20240124 19:01:23.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${company_name_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:23.226" level="INFO">Clicking element '(//ul[@id='form-item-autocomplete']/li)[1]'.</msg>
+<status status="PASS" starttime="20240124 19:01:23.225" endtime="20240124 19:01:23.275"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${save_bot_settings}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:01:23.275" endtime="20240124 19:01:23.302"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:01:23.302" endtime="20240124 19:01:23.327"/>
+</kw>
+<status status="PASS" starttime="20240124 19:01:23.275" endtime="20240124 19:01:23.327"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${save_bot_settings}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 19:01:23.328" level="INFO">Clicking button '//button[@class='icon save']'.</msg>
+<status status="PASS" starttime="20240124 19:01:23.327" endtime="20240124 19:01:23.404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 19:01:44.148" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240124 19:01:44.148" level="FAIL">Element '//h1[@class='header-bot-name']' not visible after 20 seconds.</msg>
+<status status="FAIL" starttime="20240124 19:01:23.405" endtime="20240124 19:01:44.150"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20240124 19:01:44.150" endtime="20240124 19:01:44.150"/>
+</kw>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<arg>${my_api10_bot_name}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20240124 19:01:44.150" endtime="20240124 19:01:44.150"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 19:01:44.150" endtime="20240124 19:01:46.265"/>
+</kw>
+<doc>this creates an BR V2 API1.0 bot under Evolany Co., Ltd. company</doc>
+<status status="FAIL" starttime="20240124 19:00:55.934" endtime="20240124 19:01:46.265">Element '//h1[@class='header-bot-name']' not visible after 20 seconds.</status>
+</test>
+<test id="s1-t2" name="createAPI2.0bot" line="90">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 19:01:46.266" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001C466008A00&gt;</msg>
+<status status="PASS" starttime="20240124 19:01:46.266" endtime="20240124 19:01:46.266"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.266" endtime="20240124 19:01:46.267"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.267" endtime="20240124 19:01:46.267"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.267" endtime="20240124 19:01:46.267"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.267" endtime="20240124 19:01:46.267"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.267" endtime="20240124 19:01:46.267"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 19:01:46.267" endtime="20240124 19:01:46.268"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 19:01:46.268" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240124 19:01:46.268" endtime="20240124 19:01:47.409"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://pre.bonp.me//member</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 19:01:47.410" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 19:01:47.409" endtime="20240124 19:03:20.580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:03:20.580" endtime="20240124 19:03:20.606"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:03:20.606" endtime="20240124 19:03:20.635"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>alexandra@evolany.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 19:03:20.635" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240124 19:03:20.635" endtime="20240124 19:03:20.741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:03:20.741" endtime="20240124 19:03:20.764"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:03:20.764" endtime="20240124 19:03:20.790"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>221373897221373897qW!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 19:03:20.791" level="INFO">Typing text '221373897221373897qW!' into text field '//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20240124 19:03:20.790" endtime="20240124 19:03:20.881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240124 19:03:20.881" endtime="20240124 19:03:20.900"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240124 19:03:20.900" endtime="20240124 19:03:20.923"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 19:03:20.924" level="INFO">Clicking button '//button[@type='text']'.</msg>
+<status status="PASS" starttime="20240124 19:03:20.924" endtime="20240124 19:03:20.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[text()[contains(.,'New App')]]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 19:03:31.189" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240124 19:03:31.189" level="FAIL">Element '//button[text()[contains(.,'New App')]]' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20240124 19:03:20.981" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[text()[contains(.,'New App')]]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()[contains(.,'New App')]]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>test_robotframework_bot_api2.0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='crm']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.190" endtime="20240124 19:03:31.190"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='events']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='coupons']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='catalog']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='rms']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='chat']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='ec']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='mail']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='stores']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='campaign']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.191" endtime="20240124 19:03:31.191"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='elgana']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='g_events']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='bot_posts']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='user_logs']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='linepoints']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='sfa_salesforce']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='sfa_hubspot']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='lp']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='stamp_card']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='ms365']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='files']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.192" endtime="20240124 19:03:31.192"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>plan</arg>
+<arg>pro</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>apiver</arg>
+<arg>2</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@target_name='com_id']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//ul[@id='form-item-autocomplete']/li)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.193" endtime="20240124 19:03:31.193"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.194" endtime="20240124 19:03:31.194"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.194" endtime="20240124 19:03:31.194"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 19:03:31.194" endtime="20240124 19:03:31.194"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 19:03:31.194" endtime="20240124 19:03:33.301"/>
+</kw>
+<doc>This test case creates an BR V2 API2.0 bot under Evolany Co., Ltd. company</doc>
+<status status="FAIL" starttime="20240124 19:01:46.265" endtime="20240124 19:03:33.301">Element '//button[text()[contains(.,'New App')]]' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240124 19:00:55.729" endtime="20240124 19:03:33.302"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestCaseSet">TestCaseSet</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

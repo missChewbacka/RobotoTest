@@ -1,525 +1,2687 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20231212 11:12:33.435" rpa="false" schemaversion="4">
-<suite id="s1" name="RobotDemo" source="C:\Users\Professional\PycharmProjects\RobotDemo">
-<suite id="s1-s1" name="Tests" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests">
-<suite id="s1-s1-s1" name="TestCaseSet" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\TestCaseSet.robot">
-<test id="s1-s1-s1-t1" name="add Events API2.0 bot" line="141">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240124 18:50:16.652" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests">
+<suite id="s1-s1" name="TestCaseSet" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\TestCaseSet.robot">
+<test id="s1-s1-t1" name="createAPI1.0bot" line="45">
+<kw name="Setup Webdriver" type="SETUP">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20231212 11:12:33.660" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001952D1B1300&gt;</msg>
-<status status="PASS" starttime="20231212 11:12:33.660" endtime="20231212 11:12:33.660"/>
+<msg timestamp="20240124 18:50:16.960" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017AE464BF40&gt;</msg>
+<status status="PASS" starttime="20240124 18:50:16.960" endtime="20240124 18:50:16.960"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.661" endtime="20231212 11:12:33.661"/>
+<status status="PASS" starttime="20240124 18:50:16.960" endtime="20240124 18:50:16.960"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.662" endtime="20231212 11:12:33.662"/>
+<status status="PASS" starttime="20240124 18:50:16.961" endtime="20240124 18:50:16.961"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.662" endtime="20231212 11:12:33.662"/>
+<status status="PASS" starttime="20240124 18:50:16.961" endtime="20240124 18:50:16.961"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.663" endtime="20231212 11:12:33.663"/>
+<status status="PASS" starttime="20240124 18:50:16.961" endtime="20240124 18:50:16.961"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.663" endtime="20231212 11:12:33.663"/>
+<status status="PASS" starttime="20240124 18:50:16.961" endtime="20240124 18:50:16.961"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-dev-shm-usage</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20231212 11:12:33.663" endtime="20231212 11:12:33.663"/>
+<status status="PASS" starttime="20240124 18:50:16.961" endtime="20240124 18:50:16.962"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20231212 11:12:33.664" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20231212 11:12:33.664" endtime="20231212 11:12:38.250"/>
+<msg timestamp="20240124 18:50:16.962" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240124 18:50:17.737" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240124 18:50:16.962" endtime="20240124 18:50:18.787"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240124 18:50:18.787" endtime="20240124 18:50:18.789"/>
+</kw>
+<status status="PASS" starttime="20240124 18:50:16.959" endtime="20240124 18:50:18.789"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${my_api10_bot_name}</var>
+<arg>test_bot</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240124 18:50:18.790" level="INFO">${my_api10_bot_name} = test_bot</msg>
+<status status="PASS" starttime="20240124 18:50:18.790" endtime="20240124 18:50:18.791"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${checkbox_values}</var>
+<arg>crm</arg>
+<arg>events</arg>
+<arg>coupons</arg>
+<arg>catalog</arg>
+<arg>rms</arg>
+<arg>chat</arg>
+<arg>ec</arg>
+<arg>mail</arg>
+<arg>stores</arg>
+<arg>campaign</arg>
+<arg>elgana</arg>
+<arg>g_events</arg>
+<arg>bot_posts</arg>
+<arg>user_logs</arg>
+<arg>linepoints</arg>
+<arg>sfa_salesforce</arg>
+<arg>sfa_hubspot</arg>
+<arg>lp</arg>
+<arg>stamp_card</arg>
+<arg>ms365</arg>
+<arg>files</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240124 18:50:18.792" level="INFO">${checkbox_values} = ['crm', 'events', 'coupons', 'catalog', 'rms', 'chat', 'ec', 'mail', 'stores', 'campaign', 'elgana', 'g_events', 'bot_posts', 'user_logs', 'linepoints', 'sfa_salesforce', 'sfa_hubspot', 'lp', 'stamp_c...</msg>
+<status status="PASS" starttime="20240124 18:50:18.791" endtime="20240124 18:50:18.792"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${h1_locator}</var>
+<arg>//h1[@class='header-bot-name']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240124 18:50:18.793" level="INFO">${h1_locator} = //h1[@class='header-bot-name']</msg>
+<status status="PASS" starttime="20240124 18:50:18.793" endtime="20240124 18:50:18.793"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${environment}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 18:50:18.794" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 18:50:18.793" endtime="20240124 18:50:21.546"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${email_input}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 18:50:21.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:21.557" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<status status="FAIL" starttime="20240124 18:50:21.548" endtime="20240124 18:50:21.570"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.570" endtime="20240124 18:50:21.570"/>
+</kw>
+<status status="FAIL" starttime="20240124 18:50:21.547" endtime="20240124 18:50:21.570"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_input}</arg>
+<arg>${credentials}[email]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.574" endtime="20240124 18:50:21.574"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${pass_input}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.574" endtime="20240124 18:50:21.574"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pass_input}</arg>
+<arg>${credentials}[password]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.577" endtime="20240124 18:50:21.577"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${submit_button}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.579" endtime="20240124 18:50:21.579"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.592" endtime="20240124 18:50:21.592"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${new_app_button}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.595" endtime="20240124 18:50:21.595"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${new_app_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.595" endtime="20240124 18:50:21.595"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${new_bot_name}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.596" endtime="20240124 18:50:21.596"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${new_bot_name}</arg>
+<arg>${my_api10_bot_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.596" endtime="20240124 18:50:21.596"/>
+</kw>
+<for flavor="IN">
+<var>${value}</var>
+<value>@{checkbox_values}</value>
+<iter>
+<var name="${value}"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${value}' != 'chatgpt'</arg>
+<arg>Click Element</arg>
+<arg>//input[@value='${value}']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.596" endtime="20240124 18:50:21.596"/>
+</kw>
+<status status="NOT RUN" starttime="20240124 18:50:21.596" endtime="20240124 18:50:21.596"/>
+</iter>
+<status status="NOT RUN" starttime="20240124 18:50:21.596" endtime="20240124 18:50:21.597"/>
+</for>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>plan</arg>
+<arg>pro</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.598" endtime="20240124 18:50:21.598"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>apiver</arg>
+<arg>1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.599" endtime="20240124 18:50:21.599"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${company_name_input_field}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.600" endtime="20240124 18:50:21.600"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${company_name_input_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.601" endtime="20240124 18:50:21.602"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${company_name_options}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.602" endtime="20240124 18:50:21.602"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${company_name_options}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.603" endtime="20240124 18:50:21.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${company_name_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.605" endtime="20240124 18:50:21.606"/>
+</kw>
+<kw name="Wait Until Element Is Visible and Enabled">
+<arg>${save_bot_settings}</arg>
+<status status="NOT RUN" starttime="20240124 18:50:21.608" endtime="20240124 18:50:21.608"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${save_bot_settings}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.610" endtime="20240124 18:50:21.610"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.610" endtime="20240124 18:50:21.610"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.611" endtime="20240124 18:50:21.611"/>
+</kw>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>${h1_locator}</arg>
+<arg>${my_api10_bot_name}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:21.611" endtime="20240124 18:50:21.611"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 18:50:21.611" endtime="20240124 18:50:23.760"/>
+</kw>
+<doc>this creates an BR V2 API1.0 bot under Evolany Co., Ltd. company</doc>
+<status status="FAIL" starttime="20240124 18:50:16.958" endtime="20240124 18:50:23.760">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</status>
+</test>
+<test id="s1-s1-t2" name="createAPI2.0bot" line="90">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 18:50:23.763" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017AE46824D0&gt;</msg>
+<status status="PASS" starttime="20240124 18:50:23.763" endtime="20240124 18:50:23.763"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.763" endtime="20240124 18:50:23.764"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.764" endtime="20240124 18:50:23.764"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.765" endtime="20240124 18:50:23.765"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.765" endtime="20240124 18:50:23.765"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.766" endtime="20240124 18:50:23.766"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:23.766" endtime="20240124 18:50:23.766"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 18:50:23.767" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240124 18:50:23.945" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240124 18:50:23.767" endtime="20240124 18:50:24.983"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://pre.bonp.me//member</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231212 11:12:38.250" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
-<status status="PASS" starttime="20231212 11:12:38.250" endtime="20231212 11:12:39.515"/>
+<msg timestamp="20240124 18:50:24.983" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 18:50:24.983" endtime="20240124 18:50:26.564"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//input[@name='email']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231212 11:12:39.575" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg timestamp="20240124 18:50:26.570" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=120.0.6099.71)
+  (Session info: chrome=120.0.6099.225)
 Stacktrace:
-	GetHandleVerifier [0x00007FF664384D02+56194]
-	(No symbol) [0x00007FF6642F04B2]
-	(No symbol) [0x00007FF6641976AA]
-	(No symbol) [0x00007FF664170AFD]
-	(No symbol) [0x00007FF66420C9AB]
-	(No symbol) [0x00007FF66422201F]
-	(No symbol) [0x00007FF664205C23]
-	(No symbol) [0x00007FF6641D4A45]
-	(No symbol) [0x00007FF6641D5AD4]
-	GetHandleVerifier [0x00007FF6646FD5BB+3695675]
-	GetHandleVerifier [0x00007FF664756197+4059159]
-	GetHandleVerifier [0x00007FF66474DF63+4025827]
-	GetHandleVerifier [0x00007FF66441F029+687785]
-	(No symbol) [0x00007FF6642FB508]
-	(No symbol) [0x00007FF6642F7564]
-	(No symbol) [0x00007FF6642F76E9]
-	(No symbol) [0x00007FF6642E8094]
-	BaseThreadInitThunk [0x00007FF94B1F7034+20]
-	RtlUserThreadStart [0x00007FF94BBC2651+33]
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
 </msg>
-<msg timestamp="20231212 11:12:39.580" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20240124 18:50:26.576" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=120.0.6099.71)
+  (Session info: chrome=120.0.6099.225)
 Stacktrace:
-	GetHandleVerifier [0x00007FF664384D02+56194]
-	(No symbol) [0x00007FF6642F04B2]
-	(No symbol) [0x00007FF6641976AA]
-	(No symbol) [0x00007FF664170AFD]
-	(No symbol) [0x00007FF66420C9AB]
-	(No symbol) [0x00007FF66422201F]
-	(No symbol) [0x00007FF664205C23]
-	(No symbol) [0x00007FF6641D4A45]
-	(No symbol) [0x00007FF6641D5AD4]
-	GetHandleVerifier [0x00007FF6646FD5BB+3695675]
-	GetHandleVerifier [0x00007FF664756197+4059159]
-	GetHandleVerifier [0x00007FF66474DF63+4025827]
-	GetHandleVerifier [0x00007FF66441F029+687785]
-	(No symbol) [0x00007FF6642FB508]
-	(No symbol) [0x00007FF6642F7564]
-	(No symbol) [0x00007FF6642F76E9]
-	(No symbol) [0x00007FF6642E8094]
-	BaseThreadInitThunk [0x00007FF94B1F7034+20]
-	RtlUserThreadStart [0x00007FF94BBC2651+33]
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
 </msg>
-<status status="FAIL" starttime="20231212 11:12:39.518" endtime="20231212 11:12:39.582"/>
+<status status="FAIL" starttime="20240124 18:50:26.564" endtime="20240124 18:50:26.591"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//input[@name='email']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.583" endtime="20231212 11:12:39.583"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.603" endtime="20240124 18:50:26.603"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='email']</arg>
 <arg>alexandra@evolany.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.583" endtime="20231212 11:12:39.583"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.604" endtime="20240124 18:50:26.604"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//input[@name='pass']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.583" endtime="20231212 11:12:39.584"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.604" endtime="20240124 18:50:26.605"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//input[@name='pass']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.584" endtime="20231212 11:12:39.584"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.605" endtime="20240124 18:50:26.605"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='pass']</arg>
 <arg>221373897221373897qW!</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.584" endtime="20231212 11:12:39.584"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.605" endtime="20240124 18:50:26.605"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@type='text']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.584" endtime="20231212 11:12:39.584"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.605" endtime="20240124 18:50:26.605"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@type='text']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.584" endtime="20231212 11:12:39.585"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.606" endtime="20240124 18:50:26.606"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@type='text']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.585" endtime="20231212 11:12:39.585"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.606" endtime="20240124 18:50:26.606"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>(//table[@class='list-view']/tr/td[@i='1'])[2]</arg>
+<arg>//button[text()[contains(.,'New App')]]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.585" endtime="20231212 11:12:39.585"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.606" endtime="20240124 18:50:26.606"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>(//table[@class='list-view']/tr/td[@i='1'])[2]</arg>
+<arg>//button[text()[contains(.,'New App')]]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.585" endtime="20231212 11:12:39.586"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.607" endtime="20240124 18:50:26.607"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()[contains(.,'New App')]]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.607" endtime="20240124 18:50:26.607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.607" endtime="20240124 18:50:26.607"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.608" endtime="20240124 18:50:26.608"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>test_robotframework_bot_api2.0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.608" endtime="20240124 18:50:26.608"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='crm']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.608" endtime="20240124 18:50:26.608"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='events']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.609" endtime="20240124 18:50:26.609"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='coupons']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.609" endtime="20240124 18:50:26.609"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='catalog']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.610" endtime="20240124 18:50:26.610"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='rms']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.610" endtime="20240124 18:50:26.610"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='chat']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.611" endtime="20240124 18:50:26.611"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='ec']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.611" endtime="20240124 18:50:26.611"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='mail']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.613" endtime="20240124 18:50:26.613"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='stores']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.613" endtime="20240124 18:50:26.614"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='campaign']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.614" endtime="20240124 18:50:26.614"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='elgana']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.616" endtime="20240124 18:50:26.616"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='g_events']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.616" endtime="20240124 18:50:26.616"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='bot_posts']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.616" endtime="20240124 18:50:26.616"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='user_logs']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.617" endtime="20240124 18:50:26.617"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='linepoints']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.617" endtime="20240124 18:50:26.617"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='sfa_salesforce']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.617" endtime="20240124 18:50:26.617"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='sfa_hubspot']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.617" endtime="20240124 18:50:26.617"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='lp']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.618" endtime="20240124 18:50:26.618"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='stamp_card']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.618" endtime="20240124 18:50:26.618"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='ms365']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.618" endtime="20240124 18:50:26.618"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>//input[@value='files']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.619" endtime="20240124 18:50:26.619"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>plan</arg>
+<arg>pro</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.619" endtime="20240124 18:50:26.619"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>apiver</arg>
+<arg>2</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.619" endtime="20240124 18:50:26.619"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>(//table[@class='list-view']/tr/td[@i='1'])[2]</arg>
+<arg>//input[@target_name='com_id']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.586" endtime="20231212 11:12:39.586"/>
+<status status="NOT RUN" starttime="20240124 18:50:26.619" endtime="20240124 18:50:26.619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.620" endtime="20240124 18:50:26.620"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.620" endtime="20240124 18:50:26.620"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>//ul[@id='form-item-autocomplete']/li</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.621" endtime="20240124 18:50:26.621"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//ul[@id='form-item-autocomplete']/li)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.621" endtime="20240124 18:50:26.621"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.622" endtime="20240124 18:50:26.622"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.622" endtime="20240124 18:50:26.622"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:26.623" endtime="20240124 18:50:26.623"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 18:50:26.623" endtime="20240124 18:50:28.729"/>
+</kw>
+<doc>This test case creates an BR V2 API2.0 bot under Evolany Co., Ltd. company</doc>
+<status status="FAIL" starttime="20240124 18:50:23.762" endtime="20240124 18:50:28.729">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</status>
+</test>
+<test id="s1-s1-t3" name="add Events API2.0 bot" line="157">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 18:50:28.732" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017AE4683790&gt;</msg>
+<status status="PASS" starttime="20240124 18:50:28.731" endtime="20240124 18:50:28.732"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.732" endtime="20240124 18:50:28.732"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.732" endtime="20240124 18:50:28.733"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.733" endtime="20240124 18:50:28.733"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.733" endtime="20240124 18:50:28.733"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.734" endtime="20240124 18:50:28.734"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:28.734" endtime="20240124 18:50:28.734"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 18:50:28.735" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240124 18:50:28.907" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240124 18:50:28.734" endtime="20240124 18:50:29.952"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://pre.bonp.me//member</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 18:50:29.953" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 18:50:29.953" endtime="20240124 18:50:30.628"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 18:50:30.636" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:30.642" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<status status="FAIL" starttime="20240124 18:50:30.629" endtime="20240124 18:50:30.643"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.656" endtime="20240124 18:50:30.656"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>alexandra@evolany.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.657" endtime="20240124 18:50:30.657"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.658" endtime="20240124 18:50:30.658"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.658" endtime="20240124 18:50:30.658"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>221373897221373897qW!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.662" endtime="20240124 18:50:30.662"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.663" endtime="20240124 18:50:30.663"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.664" endtime="20240124 18:50:30.664"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.664" endtime="20240124 18:50:30.664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.679" endtime="20240124 18:50:30.679"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.680" endtime="20240124 18:50:30.680"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:30.681" endtime="20240124 18:50:30.681"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//h1[contains(.,'test_robotframework_bot_api2.0')]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.586" endtime="20231212 11:12:39.586"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.682" endtime="20240124 18:50:30.682"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//a[@class='miniapps icon dots-v']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.586" endtime="20231212 11:12:39.586"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.682" endtime="20240124 18:50:30.683"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//section[@class='submenus']/ul/li</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.586" endtime="20231212 11:12:39.586"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.683" endtime="20240124 18:50:30.683"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//section[@class='submenus']/ul/li</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.586" endtime="20231212 11:12:39.587"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.683" endtime="20240124 18:50:30.683"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>(//section[@class='submenus']/ul/li)[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.587" endtime="20231212 11:12:39.587"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.684" endtime="20240124 18:50:30.684"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.588" endtime="20231212 11:12:39.588"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.684" endtime="20240124 18:50:30.684"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.588" endtime="20231212 11:12:39.588"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.685" endtime="20240124 18:50:30.685"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.589" endtime="20231212 11:12:39.589"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.685" endtime="20240124 18:50:30.685"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='linkto']</arg>
 <arg>https://www.udemy.com/</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.589" endtime="20231212 11:12:39.589"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.685" endtime="20240124 18:50:30.685"/>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>(//input[@type='file'])[1]</arg>
 <arg>C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img1.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.589" endtime="20231212 11:12:39.589"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.686" endtime="20240124 18:50:30.686"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='title']</arg>
 <arg>Test Event1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.589" endtime="20231212 11:12:39.589"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.686" endtime="20240124 18:50:30.686"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//textarea[@name='desc']</arg>
 <arg>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae arcu turpis. Morbi quis dignissim nunc, nec luctus nibh. In luctus porttitor posuere. Quisque.</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.589" endtime="20231212 11:12:39.589"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.686" endtime="20240124 18:50:30.686"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='seats']</arg>
 <arg>1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.590" endtime="20231212 11:12:39.590"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.686" endtime="20240124 18:50:30.686"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.590" endtime="20231212 11:12:39.590"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.687" endtime="20240124 18:50:30.687"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.590" endtime="20231212 11:12:39.590"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.687" endtime="20240124 18:50:30.687"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.590" endtime="20231212 11:12:39.591"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.688" endtime="20240124 18:50:30.688"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.591" endtime="20231212 11:12:39.591"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.688" endtime="20240124 18:50:30.688"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>6s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.591" endtime="20231212 11:12:39.591"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.688" endtime="20240124 18:50:30.688"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//footer/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.591" endtime="20231212 11:12:39.591"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.688" endtime="20240124 18:50:30.688"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.591" endtime="20231212 11:12:39.591"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.689" endtime="20240124 18:50:30.689"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.591" endtime="20231212 11:12:39.592"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.689" endtime="20240124 18:50:30.689"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.592" endtime="20231212 11:12:39.592"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.689" endtime="20240124 18:50:30.690"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='linkto']</arg>
 <arg>https://www.udemy.com/</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.592" endtime="20231212 11:12:39.592"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.690" endtime="20240124 18:50:30.690"/>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>(//input[@type='file'])[1]</arg>
 <arg>C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img2.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.593" endtime="20231212 11:12:39.593"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.690" endtime="20240124 18:50:30.690"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='title']</arg>
 <arg>Test Event2</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.593" endtime="20231212 11:12:39.593"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.690" endtime="20240124 18:50:30.690"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//textarea[@name='desc']</arg>
 <arg>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae arcu turpis. Morbi quis dignissim nunc, nec luctus nibh. In luctus porttitor posuere. Quisque.</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.593" endtime="20231212 11:12:39.594"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.691" endtime="20240124 18:50:30.691"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='seats']</arg>
 <arg>1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.594" endtime="20231212 11:12:39.594"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.691" endtime="20240124 18:50:30.691"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.594" endtime="20231212 11:12:39.594"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.691" endtime="20240124 18:50:30.692"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.594" endtime="20231212 11:12:39.594"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.692" endtime="20240124 18:50:30.692"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.595" endtime="20231212 11:12:39.595"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.692" endtime="20240124 18:50:30.692"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.595" endtime="20231212 11:12:39.595"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.692" endtime="20240124 18:50:30.692"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>6s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.595" endtime="20231212 11:12:39.595"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.694" endtime="20240124 18:50:30.694"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//footer/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.595" endtime="20231212 11:12:39.595"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.694" endtime="20240124 18:50:30.694"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.595" endtime="20231212 11:12:39.595"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.695" endtime="20240124 18:50:30.695"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.596" endtime="20231212 11:12:39.596"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.695" endtime="20240124 18:50:30.695"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='new icon plus-square']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.596" endtime="20231212 11:12:39.596"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.695" endtime="20240124 18:50:30.695"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='linkto']</arg>
 <arg>https://www.udemy.com/</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.596" endtime="20231212 11:12:39.596"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.695" endtime="20240124 18:50:30.696"/>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>(//input[@type='file'])[1]</arg>
 <arg>C://Users//Professional//PycharmProjects//suffering-upd//uploaddata//event_img3.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.597" endtime="20231212 11:12:39.597"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.696" endtime="20240124 18:50:30.696"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='title']</arg>
 <arg>Test Event2</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.597" endtime="20231212 11:12:39.597"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.696" endtime="20240124 18:50:30.696"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//textarea[@name='desc']</arg>
 <arg>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae arcu turpis. Morbi quis dignissim nunc, nec luctus nibh. In luctus porttitor posuere. Quisque.</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.597" endtime="20231212 11:12:39.597"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.696" endtime="20240124 18:50:30.697"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@name='seats']</arg>
 <arg>1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.597" endtime="20231212 11:12:39.597"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.697" endtime="20240124 18:50:30.697"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.597" endtime="20231212 11:12:39.597"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.697" endtime="20240124 18:50:30.697"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.598" endtime="20231212 11:12:39.598"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.697" endtime="20240124 18:50:30.697"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.598" endtime="20231212 11:12:39.598"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.698" endtime="20240124 18:50:30.698"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@class='icon save']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.598" endtime="20231212 11:12:39.598"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.698" endtime="20240124 18:50:30.698"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>6s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.598" endtime="20231212 11:12:39.598"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.699" endtime="20240124 18:50:30.699"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//footer/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231212 11:12:39.598" endtime="20231212 11:12:39.599"/>
+<status status="NOT RUN" starttime="20240124 18:50:30.699" endtime="20240124 18:50:30.699"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231212 11:12:39.599" endtime="20231212 11:12:41.758"/>
+<status status="PASS" starttime="20240124 18:50:30.700" endtime="20240124 18:50:32.823"/>
 </kw>
 <doc>This test case adds 3 events for BR V2 API2.0 bot under Evolany Co., Ltd. company.</doc>
-<status status="FAIL" starttime="20231212 11:12:33.646" endtime="20231212 11:12:41.759">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" starttime="20240124 18:50:28.731" endtime="20240124 18:50:32.823">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=120.0.6099.71)
+  (Session info: chrome=120.0.6099.225)
 Stacktrace:
-	GetHandleVerifier [0x00007FF664384D02+56194]
-	(No symbol) [0x00007FF6642F04B2]
-	(No symbol) [0x00007FF6641976AA]
-	(No symbol) [0x00007FF664170AFD]
-	(No symbol) [0x00007FF66420C9AB]
-	(No symbol) [0x00007FF66422201F]
-	(No symbol) [0x00007FF664205C23]
-	(No symbol) [0x00007FF6641D4A45]
-	(No symbol) [0x00007FF6641D5AD4]
-	GetHandleVerifier [0x00007FF6646FD5BB+3695675]
-	GetHandleVerifier [0x00007FF664756197+4059159]
-	GetHandleVerifier [0x00007FF66474DF63+4025827]
-	GetHandleVerifier [0x00007FF66441F029+687785]
-	(No symbol) [0x00007FF6642FB508]
-	(No symbol) [0x00007FF6642F7564]
-	(No symbol) [0x00007FF6642F76E9]
-	(No symbol) [0x00007FF6642E8094]
-	BaseThreadInitThunk [0x00007FF94B1F7034+20]
-	RtlUserThreadStart [0x00007FF94BBC2651+33]
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
 </status>
 </test>
-<status status="FAIL" starttime="20231212 11:12:33.460" endtime="20231212 11:12:41.761"/>
+<test id="s1-s1-t4" name="group1API2.0bot" line="233">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 18:50:32.826" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017AE4683F70&gt;</msg>
+<status status="PASS" starttime="20240124 18:50:32.826" endtime="20240124 18:50:32.826"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.826" endtime="20240124 18:50:32.827"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.827" endtime="20240124 18:50:32.827"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.827" endtime="20240124 18:50:32.827"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.828" endtime="20240124 18:50:32.828"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.828" endtime="20240124 18:50:32.828"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:32.829" endtime="20240124 18:50:32.829"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 18:50:32.829" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240124 18:50:33.006" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240124 18:50:32.829" endtime="20240124 18:50:34.075"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://pre.bonp.me//member</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 18:50:34.076" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 18:50:34.075" endtime="20240124 18:50:34.721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 18:50:34.728" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:34.731" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<status status="FAIL" starttime="20240124 18:50:34.722" endtime="20240124 18:50:34.733"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.733" endtime="20240124 18:50:34.733"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>alexandra@evolany.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.734" endtime="20240124 18:50:34.734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.734" endtime="20240124 18:50:34.734"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.736" endtime="20240124 18:50:34.736"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>221373897221373897qW!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.741" endtime="20240124 18:50:34.741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.743" endtime="20240124 18:50:34.744"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.744" endtime="20240124 18:50:34.744"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.745" endtime="20240124 18:50:34.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.747" endtime="20240124 18:50:34.747"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.747" endtime="20240124 18:50:34.747"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='0'])</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.748" endtime="20240124 18:50:34.748"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h1[contains(.,'test_robotframework_bot_api2.0')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.748" endtime="20240124 18:50:34.748"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.749" endtime="20240124 18:50:34.749"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@msg='navi-flow']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.752" endtime="20240124 18:50:34.753"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.756" endtime="20240124 18:50:34.756"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.756" endtime="20240124 18:50:34.756"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.757" endtime="20240124 18:50:34.757"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[1]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.758" endtime="20240124 18:50:34.758"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//dd[@class='new-group']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.758" endtime="20240124 18:50:34.758"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//dd[@class='new-group']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.758" endtime="20240124 18:50:34.758"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@class='new-group']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.758" endtime="20240124 18:50:34.758"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//li[@class='group_0 editing on']//input[@type='text']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.759" endtime="20240124 18:50:34.759"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//li[@class='group_0 editing on']//input[@type='text']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.759" endtime="20240124 18:50:34.759"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//li[@class='group_0 editing on']//input[@type='text']</arg>
+<arg>group1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.759" endtime="20240124 18:50:34.759"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//li[@class='group_0 editing on']//input[@type='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.760" endtime="20240124 18:50:34.760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.760" endtime="20240124 18:50:34.760"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.760" endtime="20240124 18:50:34.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.761" endtime="20240124 18:50:34.761"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.761" endtime="20240124 18:50:34.761"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.761" endtime="20240124 18:50:34.761"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.762" endtime="20240124 18:50:34.762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.762" endtime="20240124 18:50:34.762"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.762" endtime="20240124 18:50:34.762"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.762" endtime="20240124 18:50:34.763"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.763" endtime="20240124 18:50:34.763"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<arg>textitem1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.763" endtime="20240124 18:50:34.763"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='title-line']/input[@type='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.764" endtime="20240124 18:50:34.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.764" endtime="20240124 18:50:34.764"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[1]</arg>
+<arg>textitem1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.764" endtime="20240124 18:50:34.764"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[1]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.764" endtime="20240124 18:50:34.764"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.765" endtime="20240124 18:50:34.765"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.765" endtime="20240124 18:50:34.766"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.768" endtime="20240124 18:50:34.768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.768" endtime="20240124 18:50:34.768"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.769" endtime="20240124 18:50:34.769"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.769" endtime="20240124 18:50:34.769"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.769" endtime="20240124 18:50:34.769"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<arg>textitem2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.770" endtime="20240124 18:50:34.770"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[2]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.770" endtime="20240124 18:50:34.770"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.770" endtime="20240124 18:50:34.771"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[2]</arg>
+<arg>textitem2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.771" endtime="20240124 18:50:34.771"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[2]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.771" endtime="20240124 18:50:34.771"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.771" endtime="20240124 18:50:34.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.772" endtime="20240124 18:50:34.772"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.772" endtime="20240124 18:50:34.772"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.773" endtime="20240124 18:50:34.773"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.773" endtime="20240124 18:50:34.773"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.773" endtime="20240124 18:50:34.773"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.774" endtime="20240124 18:50:34.774"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<arg>textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.774" endtime="20240124 18:50:34.774"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[3]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.775" endtime="20240124 18:50:34.775"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.775" endtime="20240124 18:50:34.775"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[3]</arg>
+<arg>textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.776" endtime="20240124 18:50:34.776"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[3]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.776" endtime="20240124 18:50:34.776"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//button[@class='icon plus-square'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.776" endtime="20240124 18:50:34.776"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.777" endtime="20240124 18:50:34.777"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//dd[@rt='text']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.777" endtime="20240124 18:50:34.777"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.778" endtime="20240124 18:50:34.778"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.778" endtime="20240124 18:50:34.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.778" endtime="20240124 18:50:34.778"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.779" endtime="20240124 18:50:34.779"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<arg>textitem4</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.779" endtime="20240124 18:50:34.779"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//div[@class='title-line']/input[@type='text'])[4]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.780" endtime="20240124 18:50:34.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.780" endtime="20240124 18:50:34.780"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[4]</arg>
+<arg>textitem4</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.780" endtime="20240124 18:50:34.781"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>(//textarea[@class='msg with-emoticon'])[4]</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.781" endtime="20240124 18:50:34.781"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//section[@class='actions']/ul/li)[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.781" endtime="20240124 18:50:34.781"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//li[@tp='items'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.782" endtime="20240124 18:50:34.782"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//li[@tp='items'])[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.783" endtime="20240124 18:50:34.783"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//li[@tp='items'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.784" endtime="20240124 18:50:34.784"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.784" endtime="20240124 18:50:34.784"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.785" endtime="20240124 18:50:34.785"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.785" endtime="20240124 18:50:34.785"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>text1 button</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.785" endtime="20240124 18:50:34.785"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save label']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.786" endtime="20240124 18:50:34.786"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//section[@class='actions']/ul/li)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.786" endtime="20240124 18:50:34.786"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.786" endtime="20240124 18:50:34.787"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.787" endtime="20240124 18:50:34.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.788" endtime="20240124 18:50:34.788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.788" endtime="20240124 18:50:34.788"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.788" endtime="20240124 18:50:34.788"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>choice1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.789" endtime="20240124 18:50:34.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.789" endtime="20240124 18:50:34.789"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@data-value='manual']/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.789" endtime="20240124 18:50:34.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.790" endtime="20240124 18:50:34.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.790" endtime="20240124 18:50:34.790"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.791" endtime="20240124 18:50:34.791"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>3:textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.791" endtime="20240124 18:50:34.791"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.791" endtime="20240124 18:50:34.791"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.791" endtime="20240124 18:50:34.791"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@class='icon cog advanced-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.791" endtime="20240124 18:50:34.791"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.792" endtime="20240124 18:50:34.792"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>choice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.792" endtime="20240124 18:50:34.792"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.792" endtime="20240124 18:50:34.792"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.793" endtime="20240124 18:50:34.793"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save label']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.793" endtime="20240124 18:50:34.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.794" endtime="20240124 18:50:34.794"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//section[@class='actions']/ul/li)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.794" endtime="20240124 18:50:34.794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.794" endtime="20240124 18:50:34.794"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.794" endtime="20240124 18:50:34.794"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.795" endtime="20240124 18:50:34.795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.795" endtime="20240124 18:50:34.795"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.795" endtime="20240124 18:50:34.796"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>choice2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.796" endtime="20240124 18:50:34.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.796" endtime="20240124 18:50:34.796"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@data-value='manual']/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.796" endtime="20240124 18:50:34.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.797" endtime="20240124 18:50:34.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.797" endtime="20240124 18:50:34.797"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.797" endtime="20240124 18:50:34.797"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>3:textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.798" endtime="20240124 18:50:34.798"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.799" endtime="20240124 18:50:34.799"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.800" endtime="20240124 18:50:34.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@class='icon cog advanced-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.800" endtime="20240124 18:50:34.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.801" endtime="20240124 18:50:34.801"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>choice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.801" endtime="20240124 18:50:34.801"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.802" endtime="20240124 18:50:34.802"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.802" endtime="20240124 18:50:34.802"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save label']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.802" endtime="20240124 18:50:34.802"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:34.803" endtime="20240124 18:50:34.803"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 18:50:34.803" endtime="20240124 18:50:36.884"/>
+</kw>
+<doc>This test case adds group1 BR V2 API2.0 bot under Evolany Co., Ltd. company.</doc>
+<status status="FAIL" starttime="20240124 18:50:32.825" endtime="20240124 18:50:36.884">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</status>
+</test>
+<test id="s1-s1-t5" name="add quick reaction buttons" line="385">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240124 18:50:36.887" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000017AE4682620&gt;</msg>
+<status status="PASS" starttime="20240124 18:50:36.887" endtime="20240124 18:50:36.887"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.887" endtime="20240124 18:50:36.888"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.888" endtime="20240124 18:50:36.888"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.888" endtime="20240124 18:50:36.888"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.889" endtime="20240124 18:50:36.889"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.889" endtime="20240124 18:50:36.889"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240124 18:50:36.889" endtime="20240124 18:50:36.889"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240124 18:50:36.890" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240124 18:50:37.059" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20240124 18:50:36.890" endtime="20240124 18:50:38.130"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://pre.bonp.me//member</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240124 18:50:38.132" level="INFO">Opening url 'https://pre.bonp.me//member'</msg>
+<status status="PASS" starttime="20240124 18:50:38.132" endtime="20240124 18:50:38.701"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 18:50:38.707" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:38.711" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<status status="FAIL" starttime="20240124 18:50:38.702" endtime="20240124 18:50:38.712"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.713" endtime="20240124 18:50:38.713"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>alexandra@evolany.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.713" endtime="20240124 18:50:38.713"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.714" endtime="20240124 18:50:38.714"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.714" endtime="20240124 18:50:38.714"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='pass']</arg>
+<arg>221373897221373897qW!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.714" endtime="20240124 18:50:38.714"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.715" endtime="20240124 18:50:38.715"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.715" endtime="20240124 18:50:38.715"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type='text']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.716" endtime="20240124 18:50:38.717"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='3'])[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.732" endtime="20240124 18:50:38.732"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='3'])[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.732" endtime="20240124 18:50:38.732"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//table[@class='list-view']/tr/td[@i='3'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.732" endtime="20240124 18:50:38.732"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h1[contains(.,'test_robotframework_bot_api2.0')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.733" endtime="20240124 18:50:38.733"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.733" endtime="20240124 18:50:38.733"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//dd[@msg='navi-flow']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.736" endtime="20240124 18:50:38.736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.736" endtime="20240124 18:50:38.736"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.737" endtime="20240124 18:50:38.737"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//h5[normalize-space()='group1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.742" endtime="20240124 18:50:38.742"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//section[@class='actions']/ul/li)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.743" endtime="20240124 18:50:38.743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.743" endtime="20240124 18:50:38.743"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.744" endtime="20240124 18:50:38.744"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.744" endtime="20240124 18:50:38.744"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.744" endtime="20240124 18:50:38.744"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.744" endtime="20240124 18:50:38.744"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>choice1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.745" endtime="20240124 18:50:38.745"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.745" endtime="20240124 18:50:38.745"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@data-value='manual']/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.745" endtime="20240124 18:50:38.745"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.745" endtime="20240124 18:50:38.745"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.746" endtime="20240124 18:50:38.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.746" endtime="20240124 18:50:38.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>3:textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.747" endtime="20240124 18:50:38.747"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.747" endtime="20240124 18:50:38.747"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.751" endtime="20240124 18:50:38.751"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@class='icon cog advanced-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.752" endtime="20240124 18:50:38.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.753" endtime="20240124 18:50:38.753"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>choice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.753" endtime="20240124 18:50:38.753"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.753" endtime="20240124 18:50:38.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.754" endtime="20240124 18:50:38.754"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save label']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.754" endtime="20240124 18:50:38.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.755" endtime="20240124 18:50:38.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//section[@class='actions']/ul/li)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.755" endtime="20240124 18:50:38.755"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.755" endtime="20240124 18:50:38.755"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.756" endtime="20240124 18:50:38.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//div[@class='react-btns empty']/label)[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.756" endtime="20240124 18:50:38.756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.756" endtime="20240124 18:50:38.756"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.756" endtime="20240124 18:50:38.757"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='form-type-text']/input[@name='label']</arg>
+<arg>choice2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.757" endtime="20240124 18:50:38.757"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.757" endtime="20240124 18:50:38.757"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@data-value='manual']/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.757" endtime="20240124 18:50:38.757"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.758" endtime="20240124 18:50:38.758"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.758" endtime="20240124 18:50:38.758"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.758" endtime="20240124 18:50:38.758"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>3:textitem3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.759" endtime="20240124 18:50:38.759"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@target_name='act']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.759" endtime="20240124 18:50:38.759"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.760" endtime="20240124 18:50:38.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@class='icon cog advanced-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.760" endtime="20240124 18:50:38.760"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.760" endtime="20240124 18:50:38.760"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>choice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.760" endtime="20240124 18:50:38.760"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@name='ukey']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.761" endtime="20240124 18:50:38.761"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.761" endtime="20240124 18:50:38.761"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='icon save label']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.762" endtime="20240124 18:50:38.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 18:50:38.762" endtime="20240124 18:50:38.762"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240124 18:50:38.762" endtime="20240124 18:50:40.881"/>
+</kw>
+<doc>This test case adds quick reaction buttons BR V2 API2.0 bot under Evolany Co., Ltd. company.</doc>
+<status status="FAIL" starttime="20240124 18:50:36.886" endtime="20240124 18:50:40.881">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</status>
+</test>
+<status status="FAIL" starttime="20240124 18:50:16.683" endtime="20240124 18:50:40.883"/>
 </suite>
-<status status="FAIL" starttime="20231212 11:12:33.458" endtime="20231212 11:12:41.762"/>
-</suite>
-<status status="FAIL" starttime="20231212 11:12:33.437" endtime="20231212 11:12:41.763"/>
+<status status="FAIL" starttime="20240124 18:50:16.654" endtime="20240124 18:50:40.885"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="RobotDemo">RobotDemo</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">RobotDemo.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TestCaseSet">RobotDemo.Tests.TestCaseSet</stat>
+<stat pass="0" fail="5" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="5" skip="0" id="s1-s1" name="TestCaseSet">Tests.TestCaseSet</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231212 11:12:39.575" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg timestamp="20240124 18:50:17.737" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240124 18:50:21.555" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=120.0.6099.71)
+  (Session info: chrome=120.0.6099.225)
 Stacktrace:
-	GetHandleVerifier [0x00007FF664384D02+56194]
-	(No symbol) [0x00007FF6642F04B2]
-	(No symbol) [0x00007FF6641976AA]
-	(No symbol) [0x00007FF664170AFD]
-	(No symbol) [0x00007FF66420C9AB]
-	(No symbol) [0x00007FF66422201F]
-	(No symbol) [0x00007FF664205C23]
-	(No symbol) [0x00007FF6641D4A45]
-	(No symbol) [0x00007FF6641D5AD4]
-	GetHandleVerifier [0x00007FF6646FD5BB+3695675]
-	GetHandleVerifier [0x00007FF664756197+4059159]
-	GetHandleVerifier [0x00007FF66474DF63+4025827]
-	GetHandleVerifier [0x00007FF66441F029+687785]
-	(No symbol) [0x00007FF6642FB508]
-	(No symbol) [0x00007FF6642F7564]
-	(No symbol) [0x00007FF6642F76E9]
-	(No symbol) [0x00007FF6642E8094]
-	BaseThreadInitThunk [0x00007FF94B1F7034+20]
-	RtlUserThreadStart [0x00007FF94BBC2651+33]
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:23.945" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240124 18:50:26.570" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:28.907" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240124 18:50:30.636" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:33.006" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240124 18:50:34.728" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
+</msg>
+<msg timestamp="20240124 18:50:37.059" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Program Files\Python310\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.225); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20240124 18:50:38.707" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60A7982B2+55298]
+	(No symbol) [0x00007FF60A705E02]
+	(No symbol) [0x00007FF60A5C05AB]
+	(No symbol) [0x00007FF60A5A0038]
+	(No symbol) [0x00007FF60A626BC7]
+	(No symbol) [0x00007FF60A63A15F]
+	(No symbol) [0x00007FF60A621E83]
+	(No symbol) [0x00007FF60A5F670A]
+	(No symbol) [0x00007FF60A5F7964]
+	GetHandleVerifier [0x00007FF60AB10AAB+3694587]
+	GetHandleVerifier [0x00007FF60AB6728E+4048862]
+	GetHandleVerifier [0x00007FF60AB5F173+4015811]
+	GetHandleVerifier [0x00007FF60A8347D6+695590]
+	(No symbol) [0x00007FF60A710CE8]
+	(No symbol) [0x00007FF60A70CF34]
+	(No symbol) [0x00007FF60A70D062]
+	(No symbol) [0x00007FF60A6FD3A3]
+	BaseThreadInitThunk [0x00007FF9048A7034+20]
+	RtlUserThreadStart [0x00007FF905B02651+33]
 </msg>
 </errors>
 </robot>
