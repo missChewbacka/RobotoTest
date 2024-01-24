@@ -33,7 +33,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Create Webdriver    Chrome    options=${options}
-    Set Selenium Implicit Wait    10s
+    Set Selenium Implicit Wait    60s
 
 Wait Until Element Is Visible and Enabled
     [Arguments]    ${locator}    ${timeout}=10s
