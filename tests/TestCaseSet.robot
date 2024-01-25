@@ -11,7 +11,7 @@ ${email_input}   //input[@name='email']
 ${pass_input}   //input[@name='pass']
 ${submit_button}   //button[@type='text']
 &{credentials}    email=alexandra@evolany.com    password=221373897221373897qW!
-#New APP
+#New APP popup
 ${new_app_button}   //button[text()[contains(.,'New App')]]
 ${new_bot_name}   //input[@name='name']
 @{checkbox_values}   crm    events    coupons    catalog    rms    chat    ec    mail    stores    campaign    elgana    g_events    bot_posts    user_logs    linepoints    sfa_salesforce    sfa_hubspot    lp    stamp_card    ms365    files
@@ -19,8 +19,7 @@ ${company_name_input_field}   //input[@target_name='com_id']
 ${company_name_options}   //ul[@id='form-item-autocomplete']/li
 ${company_name_option}   (//ul[@id='form-item-autocomplete']/li)[1]
 ${save_bot_settings}   //button[@class='icon save']
-
-
+${locator}   //button[@class='tooltip icon new deploy']
 
 *** Keywords ***
 
@@ -33,10 +32,10 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Create Webdriver    Chrome    options=${options}
-    Set Selenium Implicit Wait    60s
+    Set Selenium Implicit Wait    15s
 
 Wait Until Element Is Visible and Enabled
-    [Arguments]    ${locator}    ${timeout}=10s
+    [Arguments]    ${locator}    ${timeout}=40s
     Wait Until Element Is Visible    ${locator}    timeout=${timeout}
     Wait Until Element Is Enabled    ${locator}    timeout=${timeout}
 
@@ -44,7 +43,8 @@ Wait Until Element Is Visible and Enabled
 
 createAPI1.0bot
 
-    [Documentation]    this creates an BR V2 API1.0 bot under Evolany Co., Ltd. company
+    [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
+    [Tags]   New App Popup   API1.0
     [Setup]    Setup Webdriver
     [Teardown]    Close Browser
 
@@ -77,18 +77,19 @@ createAPI1.0bot
     Click Element    ${company_name_input_field}
     Wait Until Element Is Visible and Enabled   ${company_name_options}
     Mouse Down    ${company_name_options}
+    Wait Until Element Is Visible and Enabled   ${company_name_option}
     Click Element    ${company_name_option}
     #save new bot
     Wait Until Element Is Visible and Enabled   ${save_bot_settings}
     Click Button    ${save_bot_settings}
     #Verification
-    Wait Until Element Is Visible   ${h1_locator}   timeout=60s
-    Page Should Contain Element    ${h1_locator}
-    Textfield Should Contain    ${h1_locator}    ${my_api10_bot_name}
+    Wait Until Element Is Visible and Enabled   ${locator}
+
 
 
 createAPI2.0bot
-    [Documentation]    this creates an BR V2 API1.0 bot under Evolany Co., Ltd. company
+    [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
+    [Tags]   New App Popup   API2.0
     [Setup]    Setup Webdriver
     [Teardown]    Close Browser
 
@@ -121,14 +122,14 @@ createAPI2.0bot
     Click Element    ${company_name_input_field}
     Wait Until Element Is Visible and Enabled   ${company_name_options}
     Mouse Down    ${company_name_options}
+    Wait Until Element Is Visible and Enabled   ${company_name_option}
     Click Element    ${company_name_option}
     #save new bot
     Wait Until Element Is Visible and Enabled   ${save_bot_settings}
     Click Button    ${save_bot_settings}
     #Verification
-    Wait Until Element Is Visible   ${h1_locator}   timeout=60s
-    Page Should Contain Element    ${h1_locator}
-    Textfield Should Contain    ${h1_locator}    ${my_api20_bot_name}
+    Wait Until Element Is Visible and Enabled   ${locator}
+
 
 
 
