@@ -504,10 +504,23 @@ send textitem1 broadcast
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
     [Setup]    Setup Webdriver
-               Login   ${credentials}[email]   ${credentials}[password]
-               Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Teardown]    Close Browser
 
+    Go To    ${environment}
+    Wait Until Element Is Visible and Enabled    ${email_input}
+    Input Text    ${email_input}    ${credentials}[email]
+    Wait Until Element Is Visible and Enabled    ${pass_input}
+    Input Text    ${pass_input}    ${credentials}[password]
+    Wait Until Element Is Visible and Enabled    ${submit_button}
+    Click Button    ${submit_button}
+    Wait Until Element Is Visible and Enabled   ${bot_names_list}
+    ${table_elements}    Get WebElements    ${bot_names_list}//td
+    FOR    ${cell_element}    IN    @{table_elements}
+        ${cell_text}    Get Text    ${cell_element}
+        Run Keyword If    '${test_bot}' in '${cell_text}'    Click Element    ${cell_element}
+        Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
+    END
+    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
     Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=5s
     Click Element   ${users_tab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
