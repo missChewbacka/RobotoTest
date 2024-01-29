@@ -531,7 +531,9 @@ send textitem1 broadcast jenkins
     Click Element    ${group1}
     Wait Until Element Is Visible and Enabled    ${textitem1_br}
     Click Element    ${textitem1_br}
-    Set Window Size   3600   1080
+    ${size} =    Get Window Size
+    Log    Current Window Size: ${size}
+    Set Window Size   70000   1080
     ${new_size} =    Get Window Size
     Log    New Window Size: ${new_size}
     Click Button    ${send_broadcast}
