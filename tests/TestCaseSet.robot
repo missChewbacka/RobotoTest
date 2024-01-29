@@ -16,7 +16,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
-    #Set Window Size    1920    1080
+    Set Window Size    1920    1080
     Set Selenium Implicit Wait    15s
 
 Login
