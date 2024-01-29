@@ -514,12 +514,6 @@ send textitem1 broadcast jenkins
     Input Text    ${pass_input}    ${credentials}[password]
     Wait Until Element Is Visible and Enabled    ${submit_button}
     Click Button    ${submit_button}
-    ${size} =    Get Window Size
-    Log    Current Window Size: ${size}
-    Execute JavaScript    window.innerWidth = 1980; window.innerHeight = 1080;
-    ${new_size} =    Get Window Size
-    Log    New Window Size: ${new_size}
-    Click Button    ${send_broadcast}
     Wait Until Element Is Visible and Enabled   ${bot_names_list}
     ${table_elements}    Get WebElements    ${bot_names_list}//td
     FOR    ${cell_element}    IN    @{table_elements}
