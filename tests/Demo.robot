@@ -104,11 +104,11 @@ send textitem1 broadcast
     [Teardown]    Close Browser
 
     Wait Until Element Is Not Visible    ${loader_screen}   timeout=30s
-    Sleep   3s
+    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=30s
     Click Element   ${users_tab}
-    Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=15s
+    Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=30s
     Click Button    ${broadcast_button}
-    Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=15s
+    Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=30s
     Click Element    ${group1}
     Wait Until Element Is Visible and Enabled    ${textitem1_br}
     Click Element    ${textitem1_br}
