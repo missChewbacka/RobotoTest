@@ -534,7 +534,7 @@ send textitem1 broadcast jenkins
     Click Element    ${textitem1_br}
     ${size} =    Get Window Size
     Log    Current Window Size: ${size}
-
+    Execute JavaScript    window.resizeTo(1980, 1080)
     ${new_size} =    Get Window Size
     Log    New Window Size: ${new_size}
     Click Button    ${send_broadcast}
