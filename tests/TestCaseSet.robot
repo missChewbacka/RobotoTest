@@ -497,7 +497,8 @@ Adding a "big" button to a text item (textitem1)
     Run Keyword Unless    ${my_big_button_text} ${my_new_big_button}    Fail    Test Failed
     #Wait Until Keyword Succeeds    10s    1s    Element Should Contain    ${my_new_big_button}    ${my_big_button_text}
 
-send textitem1 broadcast
+send textitem1 broadcast jenkins
+
 
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
@@ -522,7 +523,9 @@ send textitem1 broadcast
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${userstab}   timeout=5s
+    Wait Until Element Is Visible and Enabled   ${expand_top_menu}
+    Click Element    ${expand_top_menu}
+    Wait Until Element Is Visible and Enabled   ${userstab}
     Click Element   ${userstab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
