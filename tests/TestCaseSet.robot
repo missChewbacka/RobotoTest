@@ -16,7 +16,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
-    Execute JavaScript    window.resizeTo(3840, 2160)
+    Set Window Size    3600    2600
     Set Selenium Implicit Wait    15s
 Login
     [Arguments]    ${username}    ${password}
@@ -523,10 +523,10 @@ send textitem1 broadcast jenkins
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${3dots}
-    Click Element    ${3dots}
-    Wait Until Element Is Visible and Enabled   ${userstab}
-    Click Element   ${userstab}
+    #Wait Until Element Is Visible and Enabled   ${3dots}
+    #Click Element    ${3dots}
+    Wait Until Element Is Visible and Enabled   ${users_tab}
+    Click Element   ${users_tab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
     Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s
@@ -538,4 +538,30 @@ send textitem1 broadcast jenkins
     Wait Until Element Is Visible    ${sucess_sending_message}   timeout=10s
     ${actual_message}    Get Text    ${sucess_sending_message}
     Should Be Equal As Strings    ${actual_message}   Broadcasting request has been submitted and is now processing.
+
+Check Screen Size
+
+    ${test_bot}   Set Variable   Sasha-240124-brv2-api20
+    ${bot_names_list}   Set Variable    //table[@class='list-view']
+
+    [Setup]    Setup Webdriver
+    [Tags]   Screensize
+    [Teardown]    Close Browser
+
+    Wait Until Element Is Visible and Enabled    ${email_input}
+    Input Text    ${email_input}    ${credentials}[email]
+    Wait Until Element Is Visible and Enabled    ${pass_input}
+    Input Text    ${pass_input}    ${credentials}[password]
+    Wait Until Element Is Visible and Enabled    ${submit_button}
+    Click Button    ${submit_button}
+    Wait Until Element Is Visible and Enabled   ${bot_names_list}
+    ${table_elements}    Get WebElements    ${bot_names_list}//td
+    FOR    ${cell_element}    IN    @{table_elements}
+        ${cell_text}    Get Text    ${cell_element}
+        Run Keyword If    '${test_bot}' in '${cell_text}'    Click Element    ${cell_element}
+        Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
+    END
+    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+    ${screen_size}=    Execute JavaScript    return [window.innerWidth, window.innerHeight];
+    Log    Screen Size: ${screen_size[0]} x ${screen_size[1]}
 
