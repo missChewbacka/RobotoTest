@@ -6,7 +6,6 @@ Library    OperatingSystem
 Library    DateTime
 
 *** Variables ***
-*** Variables ***
 
 #Bot Names
 ${my_api10_bot_name}   test1
@@ -79,6 +78,7 @@ ${sucess_sending_message}    //div[@class='content']/p
 
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
