@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240129 20:41:12.132" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240129 20:45:00.921" rpa="false" schemaversion="4">
 <suite id="s1" name="TestCaseSet" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\TestCaseSet.robot">
 <test id="s1-t1" name="send textitem1 broadcast jenkins" line="499">
 <kw name="Setup Webdriver" type="SETUP">
@@ -8,99 +8,99 @@
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240129 20:41:12.349" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002651510DEA0&gt;</msg>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<msg timestamp="20240129 20:45:01.136" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002BB82AFDEA0&gt;</msg>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-dev-shm-usage</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:12.349"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:01.136"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pre.bonp.me//member</arg>
 <arg>chrome</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240129 20:41:12.349" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:34.297"/>
+<msg timestamp="20240129 20:45:01.136" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:10.171"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1980</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20240129 20:41:34.297" endtime="20240129 20:41:34.517"/>
+<status status="PASS" starttime="20240129 20:45:10.171" endtime="20240129 20:45:10.392"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240129 20:41:34.517" endtime="20240129 20:41:34.518"/>
+<status status="PASS" starttime="20240129 20:45:10.392" endtime="20240129 20:45:10.394"/>
 </kw>
-<status status="PASS" starttime="20240129 20:41:12.349" endtime="20240129 20:41:34.518"/>
+<status status="PASS" starttime="20240129 20:45:01.136" endtime="20240129 20:45:10.394"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${test_bot}</var>
 <arg>Sasha-240124-brv2-api20</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240129 20:41:34.519" level="INFO">${test_bot} = Sasha-240124-brv2-api20</msg>
-<status status="PASS" starttime="20240129 20:41:34.518" endtime="20240129 20:41:34.519"/>
+<msg timestamp="20240129 20:45:10.394" level="INFO">${test_bot} = Sasha-240124-brv2-api20</msg>
+<status status="PASS" starttime="20240129 20:45:10.394" endtime="20240129 20:45:10.394"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${bot_names_list}</var>
 <arg>//table[@class='list-view']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240129 20:41:34.519" level="INFO">${bot_names_list} = //table[@class='list-view']</msg>
-<status status="PASS" starttime="20240129 20:41:34.519" endtime="20240129 20:41:34.519"/>
+<msg timestamp="20240129 20:45:10.394" level="INFO">${bot_names_list} = //table[@class='list-view']</msg>
+<status status="PASS" starttime="20240129 20:45:10.394" endtime="20240129 20:45:10.394"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${3dots}</var>
 <arg>//a[@class='miniapps icon dots-v badge']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240129 20:41:34.519" level="INFO">${3dots} = //a[@class='miniapps icon dots-v badge']</msg>
-<status status="PASS" starttime="20240129 20:41:34.519" endtime="20240129 20:41:34.519"/>
+<msg timestamp="20240129 20:45:10.395" level="INFO">${3dots} = //a[@class='miniapps icon dots-v badge']</msg>
+<status status="PASS" starttime="20240129 20:45:10.395" endtime="20240129 20:45:10.395"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${userstab}</var>
 <arg>(//section[@class='submenus']//li)[1]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240129 20:41:34.519" level="INFO">${userstab} = (//section[@class='submenus']//li)[1]</msg>
-<status status="PASS" starttime="20240129 20:41:34.519" endtime="20240129 20:41:34.519"/>
+<msg timestamp="20240129 20:45:10.395" level="INFO">${userstab} = (//section[@class='submenus']//li)[1]</msg>
+<status status="PASS" starttime="20240129 20:45:10.395" endtime="20240129 20:45:10.395"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${email_input}</arg>
@@ -108,22 +108,22 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:34.520" endtime="20240129 20:41:34.542"/>
+<status status="PASS" starttime="20240129 20:45:10.395" endtime="20240129 20:45:10.426"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:34.542" endtime="20240129 20:41:34.582"/>
+<status status="PASS" starttime="20240129 20:45:10.426" endtime="20240129 20:45:10.462"/>
 </kw>
-<status status="PASS" starttime="20240129 20:41:34.520" endtime="20240129 20:41:34.582"/>
+<status status="PASS" starttime="20240129 20:45:10.395" endtime="20240129 20:45:10.462"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${email_input}</arg>
 <arg>${credentials}[email]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:34.583" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
-<status status="PASS" starttime="20240129 20:41:34.582" endtime="20240129 20:41:34.675"/>
+<msg timestamp="20240129 20:45:10.463" level="INFO">Typing text 'alexandra@evolany.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240129 20:45:10.463" endtime="20240129 20:45:10.551"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${pass_input}</arg>
@@ -131,22 +131,22 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:34.676" endtime="20240129 20:41:34.697"/>
+<status status="PASS" starttime="20240129 20:45:10.552" endtime="20240129 20:45:10.574"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:34.697" endtime="20240129 20:41:34.718"/>
+<status status="PASS" starttime="20240129 20:45:10.574" endtime="20240129 20:45:10.592"/>
 </kw>
-<status status="PASS" starttime="20240129 20:41:34.675" endtime="20240129 20:41:34.718"/>
+<status status="PASS" starttime="20240129 20:45:10.551" endtime="20240129 20:45:10.592"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${pass_input}</arg>
 <arg>${credentials}[password]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:34.718" level="INFO">Typing text '221373897221373897qW!' into text field '//input[@name='pass']'.</msg>
-<status status="PASS" starttime="20240129 20:41:34.718" endtime="20240129 20:41:34.796"/>
+<msg timestamp="20240129 20:45:10.592" level="INFO">Typing text '221373897221373897qW!' into text field '//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20240129 20:45:10.592" endtime="20240129 20:45:10.680"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${submit_button}</arg>
@@ -154,514 +154,173 @@
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:34.797" endtime="20240129 20:41:34.816"/>
+<status status="PASS" starttime="20240129 20:45:10.681" endtime="20240129 20:45:10.699"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${locator}</arg>
 <arg>timeout=${timeout}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:34.816" endtime="20240129 20:41:34.835"/>
+<status status="PASS" starttime="20240129 20:45:10.700" endtime="20240129 20:45:10.720"/>
 </kw>
-<status status="PASS" starttime="20240129 20:41:34.796" endtime="20240129 20:41:34.836"/>
+<status status="PASS" starttime="20240129 20:45:10.680" endtime="20240129 20:45:10.721"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:34.836" level="INFO">Clicking button '//button[@type='text']'.</msg>
-<status status="PASS" starttime="20240129 20:41:34.836" endtime="20240129 20:41:34.886"/>
+<msg timestamp="20240129 20:45:10.721" level="INFO">Clicking button '//button[@type='text']'.</msg>
+<status status="PASS" starttime="20240129 20:45:10.721" endtime="20240129 20:45:10.776"/>
+</kw>
+<kw name="Get Window Size" library="SeleniumLibrary">
+<var>${size}</var>
+<doc>Returns current window width and height as integers.</doc>
+<msg timestamp="20240129 20:45:10.779" level="INFO">${size} = (1044, 788)</msg>
+<status status="PASS" starttime="20240129 20:45:10.776" endtime="20240129 20:45:10.779"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Current Window Size: ${size}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240129 20:45:10.779" level="INFO">Current Window Size: (1044, 788)</msg>
+<status status="PASS" starttime="20240129 20:45:10.779" endtime="20240129 20:45:10.779"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.resizeTo(1980, 1080)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240129 20:45:10.779" level="INFO">Executing JavaScript:
+window.resizeTo(1980, 1080)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240129 20:45:10.779" endtime="20240129 20:45:10.784"/>
+</kw>
+<kw name="Get Window Size" library="SeleniumLibrary">
+<var>${new_size}</var>
+<doc>Returns current window width and height as integers.</doc>
+<msg timestamp="20240129 20:45:10.786" level="INFO">${new_size} = (1044, 788)</msg>
+<status status="PASS" starttime="20240129 20:45:10.784" endtime="20240129 20:45:10.786"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>New Window Size: ${new_size}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240129 20:45:10.786" level="INFO">New Window Size: (1044, 788)</msg>
+<status status="PASS" starttime="20240129 20:45:10.786" endtime="20240129 20:45:10.786"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${send_broadcast}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240129 20:45:10.787" level="INFO">Clicking button '//button[@class='icon send label']'.</msg>
+<msg timestamp="20240129 20:45:40.891" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240129 20:45:40.891" level="FAIL">Button with locator '//button[@class='icon send label']' not found.</msg>
+<status status="FAIL" starttime="20240129 20:45:10.786" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${bot_names_list}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:34.887" endtime="20240129 20:41:37.596"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:37.596" endtime="20240129 20:41:37.618"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:34.886" endtime="20240129 20:41:37.618"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <var>${table_elements}</var>
 <arg>${bot_names_list}//td</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.837" level="INFO">${table_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_46")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement...</msg>
-<status status="PASS" starttime="20240129 20:41:37.619" endtime="20240129 20:41:39.837"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <for flavor="IN">
 <var>${cell_element}</var>
 <value>@{table_elements}</value>
 <iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_46")&gt;</var>
+<var name="${cell_element}"/>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${cell_text}</var>
 <arg>${cell_element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.850" level="INFO">${cell_text} = 1109</msg>
-<status status="PASS" starttime="20240129 20:41:39.838" endtime="20240129 20:41:39.850"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${test_bot}' in '${cell_text}'</arg>
 <arg>Click Element</arg>
 <arg>${cell_element}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.850" endtime="20240129 20:41:39.850"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${test_bot}' in '${cell_text}'</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.851" endtime="20240129 20:41:39.851"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
-<status status="PASS" starttime="20240129 20:41:39.838" endtime="20240129 20:41:39.851"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_47")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.858" level="INFO">${cell_text} = Tina-240124-brv2-api10</msg>
-<status status="PASS" starttime="20240129 20:41:39.851" endtime="20240129 20:41:39.858"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.858" endtime="20240129 20:41:39.860"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.860" endtime="20240129 20:41:39.860"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.851" endtime="20240129 20:41:39.860"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_48")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.866" level="INFO">${cell_text} = Alexandra</msg>
-<status status="PASS" starttime="20240129 20:41:39.860" endtime="20240129 20:41:39.866"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.866" endtime="20240129 20:41:39.868"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.868" endtime="20240129 20:41:39.868"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.860" endtime="20240129 20:41:39.868"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_49")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.868" level="INFO">${cell_text} = pro</msg>
-<status status="PASS" starttime="20240129 20:41:39.868" endtime="20240129 20:41:39.868"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.868" endtime="20240129 20:41:39.868"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.876"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.868" endtime="20240129 20:41:39.876"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_50")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.876" level="INFO">${cell_text} = 6</msg>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.876"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.876"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.876"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.876"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_51")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.891" level="INFO">${cell_text} = Alexandra</msg>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.891"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.891" endtime="20240129 20:41:39.892"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.892" endtime="20240129 20:41:39.892"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.876" endtime="20240129 20:41:39.892"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_52")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.900" level="INFO">${cell_text} = 2024-01-26</msg>
-<status status="PASS" starttime="20240129 20:41:39.893" endtime="20240129 20:41:39.900"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.900" endtime="20240129 20:41:39.900"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.900" endtime="20240129 20:41:39.900"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.892" endtime="20240129 20:41:39.900"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_53")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.908" level="INFO">${cell_text} = 2024-01-24</msg>
-<status status="PASS" starttime="20240129 20:41:39.901" endtime="20240129 20:41:39.908"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.909" endtime="20240129 20:41:39.909"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.909" endtime="20240129 20:41:39.909"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.901" endtime="20240129 20:41:39.909"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_54")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.917" level="INFO">${cell_text} = </msg>
-<status status="PASS" starttime="20240129 20:41:39.910" endtime="20240129 20:41:39.917"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.917" endtime="20240129 20:41:39.918"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.918" endtime="20240129 20:41:39.918"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.909" endtime="20240129 20:41:39.918"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_55")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.926" level="INFO">${cell_text} = 1106</msg>
-<status status="PASS" starttime="20240129 20:41:39.918" endtime="20240129 20:41:39.926"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.926" endtime="20240129 20:41:39.927"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20240129 20:41:39.927" endtime="20240129 20:41:39.927"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.918" endtime="20240129 20:41:39.927"/>
-</iter>
-<iter>
-<var name="${cell_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_56")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${cell_text}</var>
-<arg>${cell_element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.934" level="INFO">${cell_text} = Sasha-240124-brv2-api20</msg>
-<status status="PASS" starttime="20240129 20:41:39.927" endtime="20240129 20:41:39.934"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<arg>Click Element</arg>
-<arg>${cell_element}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${cell_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:39.934" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="9688f072a93419ca27f3bc724b4c2700", element="80544512FFF252A646B990172283FE63_element_56")&gt;'.</msg>
-<status status="PASS" starttime="20240129 20:41:39.934" endtime="20240129 20:41:39.972"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.934" endtime="20240129 20:41:39.972"/>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<arg>'${test_bot}' in '${cell_text}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<msg timestamp="20240129 20:41:39.972" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20240129 20:41:39.972" endtime="20240129 20:41:39.972"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:39.927" endtime="20240129 20:41:39.972"/>
-</iter>
-<status status="PASS" starttime="20240129 20:41:39.837" endtime="20240129 20:41:39.972"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </for>
 <kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
 <arg>${loader_screen}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` disappears from the current page.</doc>
-<status status="PASS" starttime="20240129 20:41:39.972" endtime="20240129 20:41:56.699"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${3dots}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:56.699" endtime="20240129 20:41:56.716"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:56.716" endtime="20240129 20:41:56.732"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:56.699" endtime="20240129 20:41:56.732"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${3dots}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:56.732" level="INFO">Clicking element '//a[@class='miniapps icon dots-v badge']'.</msg>
-<status status="PASS" starttime="20240129 20:41:56.732" endtime="20240129 20:41:56.781"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${users_tab}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:56.781" endtime="20240129 20:41:56.800"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:56.800" endtime="20240129 20:41:56.816"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:56.781" endtime="20240129 20:41:56.816"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${users_tab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:56.816" level="INFO">Clicking element '(//section[@class='submenus']//li)[1]'.</msg>
-<status status="PASS" starttime="20240129 20:41:56.816" endtime="20240129 20:41:56.905"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${broadcast_button}</arg>
 <arg>timeout=5s</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:56.905" endtime="20240129 20:41:58.016"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:58.016" endtime="20240129 20:41:58.033"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:56.905" endtime="20240129 20:41:58.033"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${broadcast_button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:58.033" level="INFO">Clicking button '//button[@id='btn_broadcast']'.</msg>
-<status status="PASS" starttime="20240129 20:41:58.033" endtime="20240129 20:41:58.368"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${broadcast_popup}</arg>
 <arg>timeout=5s</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:58.368" endtime="20240129 20:41:58.391"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:58.391" endtime="20240129 20:41:58.412"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:58.368" endtime="20240129 20:41:58.412"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${group1}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:58.413" level="INFO">Clicking element '//h5[normalize-space()='group1']'.</msg>
-<status status="PASS" starttime="20240129 20:41:58.412" endtime="20240129 20:41:58.904"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible and Enabled">
 <arg>${textitem1_br}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240129 20:41:58.905" endtime="20240129 20:41:59.148"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=${timeout}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20240129 20:41:59.149" endtime="20240129 20:41:59.177"/>
-</kw>
-<status status="PASS" starttime="20240129 20:41:58.904" endtime="20240129 20:41:59.178"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${textitem1_br}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:59.178" level="INFO">Clicking element '//h5[normalize-space()='textitem1']'.</msg>
-<status status="PASS" starttime="20240129 20:41:59.178" endtime="20240129 20:41:59.241"/>
-</kw>
-<kw name="Get Window Size" library="SeleniumLibrary">
-<var>${size}</var>
-<doc>Returns current window width and height as integers.</doc>
-<msg timestamp="20240129 20:41:59.244" level="INFO">${size} = (1044, 788)</msg>
-<status status="PASS" starttime="20240129 20:41:59.242" endtime="20240129 20:41:59.244"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Current Window Size: ${size}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240129 20:41:59.244" level="INFO">Current Window Size: (1044, 788)</msg>
-<status status="PASS" starttime="20240129 20:41:59.244" endtime="20240129 20:41:59.244"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.resizeTo(1980, 1080)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240129 20:41:59.245" level="INFO">Executing JavaScript:
-window.resizeTo(1980, 1080)
-Without any arguments.</msg>
-<status status="PASS" starttime="20240129 20:41:59.244" endtime="20240129 20:41:59.252"/>
-</kw>
-<kw name="Get Window Size" library="SeleniumLibrary">
-<var>${new_size}</var>
-<doc>Returns current window width and height as integers.</doc>
-<msg timestamp="20240129 20:41:59.263" level="INFO">${new_size} = (1044, 788)</msg>
-<status status="PASS" starttime="20240129 20:41:59.252" endtime="20240129 20:41:59.263"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>New Window Size: ${new_size}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240129 20:41:59.263" level="INFO">New Window Size: (1044, 788)</msg>
-<status status="PASS" starttime="20240129 20:41:59.263" endtime="20240129 20:41:59.263"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${send_broadcast}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240129 20:41:59.265" level="INFO">Clicking button '//button[@class='icon send label']'.</msg>
-<msg timestamp="20240129 20:42:14.383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240129 20:42:14.383" level="FAIL">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=120.0.6099.225)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7A67482B2+55298]
-	(No symbol) [0x00007FF7A66B5E02]
-	(No symbol) [0x00007FF7A657045D]
-	(No symbol) [0x00007FF7A65B2B4C]
-	(No symbol) [0x00007FF7A65A87BF]
-	(No symbol) [0x00007FF7A65D20AA]
-	(No symbol) [0x00007FF7A65A80CF]
-	(No symbol) [0x00007FF7A65D22C0]
-	(No symbol) [0x00007FF7A65EAAA4]
-	(No symbol) [0x00007FF7A65D1E83]
-	(No symbol) [0x00007FF7A65A670A]
-	(No symbol) [0x00007FF7A65A7964]
-	GetHandleVerifier [0x00007FF7A6AC0AAB+3694587]
-	GetHandleVerifier [0x00007FF7A6B1728E+4048862]
-	GetHandleVerifier [0x00007FF7A6B0F173+4015811]
-	GetHandleVerifier [0x00007FF7A67E47D6+695590]
-	(No symbol) [0x00007FF7A66C0CE8]
-	(No symbol) [0x00007FF7A66BCF34]
-	(No symbol) [0x00007FF7A66BD062]
-	(No symbol) [0x00007FF7A66AD3A3]
-	BaseThreadInitThunk [0x00007FF84E157034+20]
-	RtlUserThreadStart [0x00007FF84EA62651+33]
-</msg>
-<status status="FAIL" starttime="20240129 20:41:59.263" endtime="20240129 20:42:14.389"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${sucess_sending_message}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240129 20:42:14.389" endtime="20240129 20:42:14.389"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${actual_message}</var>
 <arg>${sucess_sending_message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240129 20:42:14.389" endtime="20240129 20:42:14.389"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${actual_message}</arg>
 <arg>Broadcasting request has been submitted and is now processing.</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" starttime="20240129 20:42:14.389" endtime="20240129 20:42:14.389"/>
+<status status="NOT RUN" starttime="20240129 20:45:40.891" endtime="20240129 20:45:40.891"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240129 20:42:14.389" endtime="20240129 20:42:17.490"/>
+<status status="PASS" starttime="20240129 20:45:40.891" endtime="20240129 20:45:42.969"/>
 </kw>
 <doc>This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.</doc>
 <tag>API1.0</tag>
@@ -669,34 +328,9 @@ Stacktrace:
 <tag>Demo_test</tag>
 <tag>New App Popup</tag>
 <tag>Regression</tag>
-<status status="FAIL" starttime="20240129 20:41:12.349" endtime="20240129 20:42:17.490">ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=120.0.6099.225)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7A67482B2+55298]
-	(No symbol) [0x00007FF7A66B5E02]
-	(No symbol) [0x00007FF7A657045D]
-	(No symbol) [0x00007FF7A65B2B4C]
-	(No symbol) [0x00007FF7A65A87BF]
-	(No symbol) [0x00007FF7A65D20AA]
-	(No symbol) [0x00007FF7A65A80CF]
-	(No symbol) [0x00007FF7A65D22C0]
-	(No symbol) [0x00007FF7A65EAAA4]
-	(No symbol) [0x00007FF7A65D1E83]
-	(No symbol) [0x00007FF7A65A670A]
-	(No symbol) [0x00007FF7A65A7964]
-	GetHandleVerifier [0x00007FF7A6AC0AAB+3694587]
-	GetHandleVerifier [0x00007FF7A6B1728E+4048862]
-	GetHandleVerifier [0x00007FF7A6B0F173+4015811]
-	GetHandleVerifier [0x00007FF7A67E47D6+695590]
-	(No symbol) [0x00007FF7A66C0CE8]
-	(No symbol) [0x00007FF7A66BCF34]
-	(No symbol) [0x00007FF7A66BD062]
-	(No symbol) [0x00007FF7A66AD3A3]
-	BaseThreadInitThunk [0x00007FF84E157034+20]
-	RtlUserThreadStart [0x00007FF84EA62651+33]
-</status>
+<status status="FAIL" starttime="20240129 20:45:01.136" endtime="20240129 20:45:42.969">Button with locator '//button[@class='icon send label']' not found.</status>
 </test>
-<status status="FAIL" starttime="20240129 20:41:12.132" endtime="20240129 20:42:17.490"/>
+<status status="FAIL" starttime="20240129 20:45:00.921" endtime="20240129 20:45:42.969"/>
 </suite>
 <statistics>
 <total>
