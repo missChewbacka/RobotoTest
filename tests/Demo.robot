@@ -104,7 +104,7 @@ send textitem1 broadcast
     [Teardown]    Close Browser
 
     Wait Until Element Is Not Visible    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled    ${users_tab}   timeout=15s
+    Sleep   3s
     Click Element   ${users_tab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=15s
     Click Button    ${broadcast_button}
