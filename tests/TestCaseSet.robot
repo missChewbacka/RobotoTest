@@ -502,7 +502,7 @@ send textitem1 broadcast
     ${bot_names_list}   Set Variable    //table[@class='list-view']
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
-    [Tags]   New App Popup   API1.0   Regression   Broadcast
+    [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${test_bot}
