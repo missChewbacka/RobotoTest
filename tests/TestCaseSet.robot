@@ -497,7 +497,6 @@ Adding a "big" button to a text item (textitem1)
 
 send textitem1 broadcast jenkins
 
-
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
     ${3dots}   Set Variable   //a[@class='miniapps icon dots-v badge']
@@ -522,8 +521,8 @@ send textitem1 broadcast jenkins
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    #Wait Until Element Is Visible and Enabled   ${3dots}
-    #Click Element    ${3dots}
+    Wait Until Element Is Visible and Enabled   ${3dots}
+    Click Element    ${3dots}
     Wait Until Element Is Visible and Enabled   ${users_tab}
     Click Element   ${users_tab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
@@ -561,6 +560,10 @@ Check Screen Size
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    ${screen_size}=    Execute JavaScript    return [window.innerWidth, window.innerHeight];
-    Log    Screen Size: ${screen_size[0]} x ${screen_size[1]}
-
+    ${size} =    Get Window Size
+    Log    Current Window Size: ${size}
+    Set Window Size           2160
+    ${new_size} =    Get Window Size
+    Log    New Window Size: ${new_size}
+    # Other test steps go here
+    Close Browser
