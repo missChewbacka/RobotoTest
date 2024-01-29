@@ -500,6 +500,7 @@ send textitem1 broadcast
 
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
+    ${userstab}   Set Variable   (//nav[@class='btns app-menus']/a)[5]
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
@@ -521,8 +522,8 @@ send textitem1 broadcast
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=5s
-    Click Element   ${users_tab}
+    Wait Until Element Is Visible and Enabled   ${userstab}   timeout=5s
+    Click Element   ${userstab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
     Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s
