@@ -16,7 +16,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
-    Set Window Size    1920    1080
+    Execute JavaScript    window.resizeTo(1920, 1080)
     Set Selenium Implicit Wait    15s
 
 Login
@@ -524,8 +524,8 @@ send textitem1 broadcast jenkins
         Exit For Loop If    '${test_bot}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${expand_top_menu}
-    Click Element    ${expand_top_menu}
+    #Wait Until Element Is Visible and Enabled   ${3dots}
+    #Click Element    ${3dots}
     Wait Until Element Is Visible and Enabled   ${userstab}
     Click Element   ${userstab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
