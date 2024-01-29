@@ -78,7 +78,7 @@ ${sucess_sending_message}    //div[@class='content']/p
 
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    Call Method    ${options}    add_argument    --headless
+    #Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
@@ -173,12 +173,12 @@ send textitem1 broadcast
                Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Teardown]    Close Browser
 
-    Wait Until Element Is Not Visible    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=30s
+    Wait Until Element Is Not Visible    ${loader_screen}   timeout=5s
+    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=5s
     Click Element   ${users_tab}
-    Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=30s
+    Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
-    Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=30s
+    Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s
     Click Element    ${group1}
     Wait Until Element Is Visible and Enabled    ${textitem1_br}
     Click Element    ${textitem1_br}

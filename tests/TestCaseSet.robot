@@ -73,7 +73,7 @@ create API1.0 bot
     ${my_company_name}   Set Variable   Evolany Co., Ltd.
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
-    [Tags]   New App Popup   API1.0   Regression
+    [Tags]   New App Popup   API1.0   Regression Test1   Test2
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
@@ -209,7 +209,7 @@ add Events to API1.0 bot
     Wait Until Page Contains Element   ${confirm_popup}   timeout=20s
     Click Element    ${confirm_save}
 
-add Events to API2.0 bot
+add Events to API1.0 bot
 
     ${event_link_list}=   Create List   https://www.udemy.com/   https://www.netflix.com/   https://soundcloud.com/
     ${event_title_list}=    Create List   Test Event1   Test Event2   Test Event3
@@ -220,10 +220,10 @@ add Events to API2.0 bot
     ${seats}   Set Variable   1
 
     [Documentation]    This test adds 3 events (event1 and event2 application period has already started) to a BR V2 API2.0 bot
-    [Tags]   Events Tab   API2.0   Regression
+    [Tags]   Events Tab   API1.0   Regression
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
-               Open Bot   ${my_api20_bot_name}
+               Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
 
     Wait Until Element Is Visible and Enabled   ${expand_top_menu}
@@ -288,7 +288,7 @@ adding group1 to api1.0 bot
 
     [Documentation]    This test adds group1 to a BR V2 API1.0 bot
 
-    [Tags]   App Tab   API1.0   Regression
+    [Tags]   App Tab   API1.0   Regression   Test2
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
