@@ -5,6 +5,8 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 Library    DateTime
 
+*** Variables ***
+${BROWSER_OPTIONS}    --headless --window-size=1920,1080
 *** Keywords ***
 
 Setup Webdriver
@@ -13,8 +15,9 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --start-maximized
+    #Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --window-size=1920,1080
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
     Set Window Size    1980    1080
     Set Selenium Implicit Wait    15s
@@ -502,6 +505,7 @@ send textitem1 broadcast jenkins
     ${bot_names_list}   Set Variable    //table[@class='list-view']
     ${3dots}   Set Variable   //a[@class='miniapps icon dots-v badge']
     ${userstab}   Set Variable   (//section[@class='submenus']//li)[1]
+
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
