@@ -531,6 +531,9 @@ send textitem1 broadcast jenkins
     Click Element    ${group1}
     Wait Until Element Is Visible and Enabled    ${textitem1_br}
     Click Element    ${textitem1_br}
+    Set Window Size   3600   1080
+    ${new_size} =    Get Window Size
+    Log    New Window Size: ${new_size}
     Click Button    ${send_broadcast}
     #Verification: check if the 'Broadcasting request has been submitted and is now processing.' is displayed.
     Wait Until Element Is Visible    ${sucess_sending_message}   timeout=10s
@@ -562,7 +565,7 @@ Check Screen Size
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
     ${size} =    Get Window Size
     Log    Current Window Size: ${size}
-    Set Window Size           2160
+    Set Window Size   1920   1080
     ${new_size} =    Get Window Size
     Log    New Window Size: ${new_size}
     # Other test steps go here
