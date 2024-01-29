@@ -502,6 +502,7 @@ send textitem1 broadcast jenkins
 
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
+    ${3dots}   Set Variable   //a[@class='miniapps icon dots-v badge']
     ${userstab}   Set Variable   (//nav[@class='btns app-menus']/a)[5]
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
