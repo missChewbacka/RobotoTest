@@ -16,6 +16,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
+    Execute JavaScript    window.resizeTo(1920, 1080)
     Set Selenium Implicit Wait    15s
 
 Login
@@ -502,7 +503,7 @@ send textitem1 broadcast jenkins
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
     ${3dots}   Set Variable   //a[@class='miniapps icon dots-v badge']
-    ${userstab}   Set Variable   (//nav[@class='btns app-menus']/a)[5]
+    ${userstab}   Set Variable   (//section[@class='submenus']//li)[1]
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
