@@ -34,6 +34,17 @@ Open Bot
     Select Option With Specified Text    ${bot_option_list}    ${my_bot_name}
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
 
+Open Specified Bot
+    [Arguments]    ${table_locator}    ${target_text}
+    Wait Until Element Is Visible and Enabled   ${table_locator}
+    ${table_elements}    Get WebElements    ${table_locator}//td
+    FOR    ${cell_element}    IN    @{table_elements}
+        ${cell_text}    Get Text    ${cell_element}
+        Run Keyword If    '${target_text}' in '${cell_text}'    Click Element    ${cell_element}
+        Exit For Loop If    '${target_text}' in '${cell_text}'   # Exit the loop if the text is found
+    END
+    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+
 Wait Until Element Is Visible and Enabled
     [Arguments]    ${locator}    ${timeout}=40s
     Wait Until Element Is Visible    ${locator}    timeout=${timeout}
@@ -485,4 +496,29 @@ Adding a "big" button to a text item (textitem1)
     Run Keyword Unless    ${my_big_button_text} ${my_new_big_button}    Fail    Test Failed
     #Wait Until Keyword Succeeds    10s    1s    Element Should Contain    ${my_new_big_button}    ${my_big_button_text}
 
+send textitem1 broadcast
+
+    ${test_bot}   Set Variable   Sasha-240124-brv2-api20
+    ${bot_names_list}   Set Variable    //table[@class='list-view']
+
+    [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
+    [Tags]   New App Popup   API1.0   Regression   Broadcast
+    [Setup]    Setup Webdriver
+               Login   ${credentials}[email]   ${credentials}[password]
+               Open Specified Bot   ${bot_names_list}   ${test_bot}
+    [Teardown]    Close Browser
+
+    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=5s
+    Click Element   ${users_tab}
+    Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
+    Click Button    ${broadcast_button}
+    Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s
+    Click Element    ${group1}
+    Wait Until Element Is Visible and Enabled    ${textitem1_br}
+    Click Element    ${textitem1_br}
+    Click Button    ${send_broadcast}
+    #Verification: check if the 'Broadcasting request has been submitted and is now processing.' is displayed.
+    Wait Until Element Is Visible    ${sucess_sending_message}   timeout=10s
+    ${actual_message}    Get Text    ${sucess_sending_message}
+    Should Be Equal As Strings    ${actual_message}   Broadcasting request has been submitted and is now processing.
 
