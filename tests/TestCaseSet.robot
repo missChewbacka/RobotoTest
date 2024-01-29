@@ -16,6 +16,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
+    Set Window Size    1980    1080
     Set Selenium Implicit Wait    15s
 Login
     [Arguments]    ${username}    ${password}
@@ -533,7 +534,7 @@ send textitem1 broadcast jenkins
     Click Element    ${textitem1_br}
     ${size} =    Get Window Size
     Log    Current Window Size: ${size}
-    Set Window Size   70000   1080
+
     ${new_size} =    Get Window Size
     Log    New Window Size: ${new_size}
     Click Button    ${send_broadcast}
