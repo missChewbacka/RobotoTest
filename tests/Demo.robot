@@ -15,7 +15,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Create Webdriver    Chrome    options=${options}g
+    Create Webdriver    Chrome    options=${options}
     Set Selenium Implicit Wait    60s
 
 Login
