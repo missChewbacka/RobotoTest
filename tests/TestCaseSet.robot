@@ -15,7 +15,8 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Create Webdriver    Chrome    options=${options}
+    Open Browser    https://pre.bonp.me//member    chrome    options=${options}
+    #Set Window Size    1920    1080
     Set Selenium Implicit Wait    15s
 
 Login
@@ -507,7 +508,6 @@ send textitem1 broadcast
     [Setup]    Setup Webdriver
     [Teardown]    Close Browser
 
-    Go To    ${environment}
     Wait Until Element Is Visible and Enabled    ${email_input}
     Input Text    ${email_input}    ${credentials}[email]
     Wait Until Element Is Visible and Enabled    ${pass_input}
