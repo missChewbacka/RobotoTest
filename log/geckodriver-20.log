@@ -1,0 +1,31 @@
+1706782808438	geckodriver	INFO	Listening on 127.0.0.1:50237
+1706782811492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-notifications" "--disable-infoba ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\PROFES~1\\AppData\\Local\\Temp\\rust_mozprofilegwvMkU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706782811787	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-notifications"
+console.error: "Warning: unrecognized command line flag" "-disable-extensions"
+1706782811861	Marionette	INFO	Listening on port 50264
+WebDriver BiDi listening on ws://127.0.0.1:50238
+Read port: 50264
+1706782812047	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50238/devtools/browser/7ac1de8c-bf10-488c-b234-32ff19bfbbf8
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+1706782843382	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+1706782874956	Marionette	INFO	Stopped listening on port 50264
+JavaScript warning: https://pre.bonp.me/js/libs/socket.io.js, line 6: Script terminated by timeout at:
+n@https://pre.bonp.me/js/libs/socket.io.js:6:7144
+r.prototype.setPing/t.pingIntervalTimer<@https://pre.bonp.me/js/libs/socket.io.js:7:3760
+
+Dynamically enable window occlusion 1

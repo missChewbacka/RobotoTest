@@ -14,8 +14,18 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    https://pre.bonp.me//member    chrome    options=${options}
+    Open Browser    https://pre.bonp.me//member    chrome    options=${options}   executable_path=C:\Users\Professional\PycharmProjects\RobotDemo\drivers\chromedriver.exe
     #Set Window Size    1936    1056
+    Set Selenium Implicit Wait    15s
+
+Setup Firefox Webdriver
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    https://pre.bonp.me//member    firefox    options=${options}   executable_path=C:\Users\Professional\Downloads\geckodriver-v0.34.0-win-aarch64
+    Set Window Size    1445    875
     Set Selenium Implicit Wait    15s
 
 Login
@@ -99,14 +109,15 @@ send textitem1 broadcast
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo
 
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Firefox Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Teardown]    Close Browser
 
-    #Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
+    Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
     Wait Until Element Is Visible   ${users_tab}   timeout=10s
     Click Element   ${users_tab}
+    Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
     Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s

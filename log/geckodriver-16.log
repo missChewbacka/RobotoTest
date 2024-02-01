@@ -1,0 +1,33 @@
+1706781824230	geckodriver	INFO	Listening on 127.0.0.1:64844
+1706781827277	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-notifications" "--disable-infoba ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\PROFES~1\\AppData\\Local\\Temp\\rust_mozprofilegeF7u3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706781827576	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-notifications"
+console.error: "Warning: unrecognized command line flag" "-disable-extensions"
+1706781827649	Marionette	INFO	Listening on port 64856
+WebDriver BiDi listening on ws://127.0.0.1:64845
+Read port: 64856
+1706781827840	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64845/devtools/browser/428b1546-1418-4e6b-8ba5-7a699f477c43
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+1706781858006	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706781858882	Marionette	INFO	Stopped listening on port 64856
+JavaScript warning: https://www.gstatic.com/firebasejs/4.11.0/firebase.js, line 27: Script terminated by timeout at:
+79/</</go/t.c<@https://www.gstatic.com/firebasejs/4.11.0/firebase.js:27:56048
+
+Dynamically enable window occlusion 1
+console.warn: services.settings: main/translations-wasm sync interrupted by shutdown
+console.warn: services.settings: main/language-dictionaries sync interrupted by shutdown
+console.warn: services.settings: main/password-recipes sync interrupted by shutdown
+console.warn: services.settings: main/password-rules sync interrupted by shutdown
+console.warn: services.settings: main/translations-identification-models sync interrupted by shutdown
+console.warn: services.settings: main/fingerprinting-protection-overrides sync interrupted by shutdown
+console.warn: services.settings: main/fxmonitor-breaches sync interrupted by shutdown
+console.error: (new Error("IndexedDB: main/message-groups getLastModified() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.sys.mjs", 16))
