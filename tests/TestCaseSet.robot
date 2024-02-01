@@ -5,8 +5,6 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 Library    DateTime
 
-*** Variables ***
-${BROWSER_OPTIONS}    --headless --window-size=1920,1080
 *** Keywords ***
 
 Setup Webdriver
@@ -15,9 +13,8 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
-    #Call Method    ${options}    add_argument    --start-maximized
+    Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --window-size=1920,1080
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
     Set Window Size    1980    1080
     Set Selenium Implicit Wait    15s
@@ -87,7 +84,7 @@ create API1.0 bot
     ${my_company_name}   Set Variable   Evolany Co., Ltd.
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
-    [Tags]   New App Popup   API1.0   Regression Test1   Test2
+    [Tags]   New App Popup   API1.0   Regression   Test1   Test2
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
@@ -367,6 +364,8 @@ adding group1 to api1.0 bot
 
 Creating a new chat group
 
+    ${test_bot}   Set Variable   test1
+    ${bot_names_list}   Set Variable    //table[@class='list-view']
     ${my_group_name}   Set Variable   group1
 
     [Documentation]    This test adds group1 to a BR V2 API1.0 bot
@@ -374,7 +373,7 @@ Creating a new chat group
     [Tags]   App Tab   API1.0   Regression   Test1
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
-               Open Bot   ${my_api10_bot_name}
+               Open Specified Bot   ${bot_names_list}   ${my_api10_bot_name}
     [Teardown]    Close Browser
 
     Click Element   ${chatflow_tab}

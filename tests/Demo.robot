@@ -17,7 +17,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Create Webdriver    Chrome    options=${options}
-    Set Selenium Implicit Wait    60s
+    Set Selenium Implicit Wait    20s
 
 Login
     [Arguments]    ${username}    ${password}
@@ -104,8 +104,8 @@ send textitem1 broadcast
                Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Teardown]    Close Browser
 
-    Wait Until Element Is Not Visible    ${loader_screen}   timeout=5s
-    Wait Until Element Is Visible and Enabled   ${users_tab}   timeout=5s
+    #Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
+    Wait Until Element Is Visible   ${users_tab}   timeout=10s
     Click Element   ${users_tab}
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
