@@ -84,7 +84,7 @@ create API1.0 bot
     ${my_company_name}   Set Variable   Evolany Co., Ltd.
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
-    [Tags]   New App Popup   API1.0   Regression   Test1   Test2
+    [Tags]   NewAppPopup   API1.0   Regression   Test1   Test2
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
@@ -123,7 +123,7 @@ create API2.0 bot
     ${my_company_name}   Set Variable   Evolany Co., Ltd.
 
     [Documentation]    This test creates a BR V2 API2.0 bot under Evolany Co., Ltd. company
-    [Tags]   New App Popup   API2.0   Regression
+    [Tags]   NewAppPopup   API2.0   Regression
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
@@ -507,7 +507,7 @@ send textitem1 broadcast jenkins
 
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
-    [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo_test
+    [Tags]   API1.0   Regression   Broadcast   Demo_test
     [Setup]    Setup Webdriver
     [Teardown]    Close Browser
 
