@@ -9,17 +9,15 @@ Library    DateTime
 
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    #Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --window-size=1920,1080
+    #Call Method    ${options}    add_argument    --disable-gpu
+    #Call Method    ${options}    add_argument    --window-size=1920,1080
     #comment 3 above lines
-    Call Method    ${options}    add_argument    --disable-notifications
-    Call Method    ${options}    add_argument    --disable-infobars
-    Call Method    ${options}    add_argument    --disable-extensions
-    Call Method    ${options}    add_argument    --no-sandbox
+    #Call Method    ${options}    add_argument    --disable-notifications
+    #Call Method    ${options}    add_argument    --disable-infobars
+    #Call Method    ${options}    add_argument    --disable-extensions
     #Call Method    ${options}    add_argument    --start-maximized
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Set Window Size    1936    1056
     Create Webdriver    Chrome    options=${options}
     Set Selenium Implicit Wait    20s
 
