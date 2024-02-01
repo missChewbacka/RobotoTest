@@ -1,0 +1,22 @@
+1706791916062	geckodriver	INFO	Listening on 127.0.0.1:61111
+1706791919149	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-notifications" "--disable-infoba ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\PROFES~1\\AppData\\Local\\Temp\\rust_mozprofilezn4uDO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706791919399	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-disable-notifications"
+console.error: "Warning: unrecognized command line flag" "-disable-extensions"
+1706791919458	Marionette	INFO	Listening on port 61124
+WebDriver BiDi listening on ws://127.0.0.1:61112
+Read port: 61124
+1706791919608	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61112/devtools/browser/6c209feb-6399-4871-9eb2-883efeb88d83
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://pre.bonp.me."
+JavaScript warning: https://pre.bonp.me/js/anybot.min.js?v=1fe1cd83398cea882baeb473e43643345887681f, line 1: unreachable code after return statement
+1706791949897	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+1706791973309	Marionette	INFO	Stopped listening on port 61124
+Dynamically enable window occlusion 1

@@ -7,7 +7,7 @@ Library    DateTime
 
 *** Keywords ***
 
-Setup Webdriver
+Setup Chrome Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
@@ -15,7 +15,18 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
-    #Set Window Size    1980    1080
+    #executable_path=C:\Windows\System32
+    #Set Window Size    1936    1056
+    Set Selenium Implicit Wait    15s
+
+Setup Firefox Webdriver
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
+    Call Method    ${options}    add_argument    --disable-notifications
+    Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    https://pre.bonp.me//member    firefox    options=${options}   executable_path=C:\Users\Professional\Downloads\geckodriver-v0.34.0-win-aarch64
+    Set Window Size    1445    875
     Set Selenium Implicit Wait    15s
 
 Login
@@ -28,12 +39,6 @@ Login
     Wait Until Element Is Visible and Enabled    ${submit_button}
     Click Button    ${submit_button}
 
-Open Bot
-    [Arguments]   ${my_bot_name}
-    Wait Until Element Is Visible and Enabled   ${bot_option_list}
-    Select Option With Specified Text    ${bot_option_list}    ${my_bot_name}
-    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-
 Open Specified Bot
     [Arguments]    ${table_locator}    ${target_text}
     Wait Until Element Is Visible and Enabled   ${table_locator}
@@ -44,6 +49,25 @@ Open Specified Bot
         Exit For Loop If    '${target_text}' in '${cell_text}'   # Exit the loop if the text is found
     END
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+
+Open Bot 1
+    [Arguments]   ${my_bot_name}   ${my_locator}
+    Wait Until Element Is Visible and Enabled   ${my_locator}
+    ${elements}    Get WebElements    ${my_locator}
+    FOR    ${element}    IN    @{elements}
+        ${text}    Get Text    ${element}
+        Run Keyword If    '${my_bot_name}' in '${text}'    Click Element    ${element}
+    END
+    Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
+
+Click Element with Specified Text
+    [Arguments]   ${my_elements_locator}   ${target_text}
+    ${elements}    Get WebElements    ${my_elements_locator}
+    FOR    ${element}    IN    @{elements}
+        ${text}    Get Text    ${element}
+        Run Keyword If    '${target_text}' in '${text}'    Click Element    ${element}
+    END
+
 
 Wait Until Element Is Visible and Enabled
     [Arguments]    ${locator}    ${timeout}=40s
@@ -85,7 +109,7 @@ create API1.0 bot
 
     [Documentation]    This test creates a BR V2 API1.0 bot under Evolany Co., Ltd. company
     [Tags]   NewAppPopup   API1.0   Regression   Test1   Test2
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Firefox Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
 
@@ -115,7 +139,6 @@ create API1.0 bot
     Click Button    ${save_bot_settings}
     #Verification
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${locator}
 
 create API2.0 bot
 
@@ -124,7 +147,7 @@ create API2.0 bot
 
     [Documentation]    This test creates a BR V2 API2.0 bot under Evolany Co., Ltd. company
     [Tags]   NewAppPopup   API2.0   Regression
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
     [Teardown]    Close Browser
 
@@ -152,7 +175,6 @@ create API2.0 bot
     Click Button    ${save_bot_settings}
     #Verification
     Wait Until Page Does Not Contain Element    ${loader_screen}   timeout=30s
-    Wait Until Element Is Visible and Enabled   ${locator}
 
 add Events to API1.0 bot
 
@@ -166,7 +188,7 @@ add Events to API1.0 bot
 
     [Documentation]    This test adds 3 events (event1 and event2 application period has already started) to a BR V2 API1.0 bot
     [Tags]   Events Tab   API1.0   Regression
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -232,7 +254,7 @@ add Events to API1.0 bot
 
     [Documentation]    This test adds 3 events (event1 and event2 application period has already started) to a BR V2 API2.0 bot
     [Tags]   Events Tab   API1.0   Regression
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -300,7 +322,7 @@ adding group1 to api1.0 bot
     [Documentation]    This test adds group1 to a BR V2 API1.0 bot
 
     [Tags]   App Tab   API1.0   Regression   Test2
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -371,7 +393,7 @@ Creating a new chat group
     [Documentation]    This test adds group1 to a BR V2 API1.0 bot
 
     [Tags]   App Tab   API1.0   Regression   Test1
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -391,7 +413,7 @@ Creating text items (actions)
 
     [Documentation]    This test adds textitem1, textitem2, textitem3, textitem4 text actions to a group1
     [Tags]   App Tab   API1.0   Regression   Test1
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -442,7 +464,7 @@ Entering text in the text field
 
     [Documentation]    This test enters "text1"-"text4" in the text fields of the created text items
     [Tags]   App Tab   API1.0   Regression   Test1
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -478,7 +500,7 @@ Adding a "big" button to a text item (textitem1)
 
     [Documentation]    This test adds "text1 button" to textitem1 chatflow action.
     [Tags]   App Tab   API1.0   Regression   Test1
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Bot   ${my_api10_bot_name}
     [Teardown]    Close Browser
@@ -508,7 +530,7 @@ send textitem1 broadcast jenkins
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   API1.0   Regression   Broadcast   Demo_test
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
     [Teardown]    Close Browser
 
     Wait Until Element Is Visible and Enabled    ${email_input}
@@ -545,7 +567,8 @@ Check Screen Size
     ${test_bot}   Set Variable   Sasha-240124-brv2-api20
     ${bot_names_list}   Set Variable    //table[@class='list-view']
 
-    [Setup]    Setup Webdriver
+    [Setup]    Setup Chrome Webdriver
+               Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Tags]   Screensize
     [Teardown]    Close Browser
 

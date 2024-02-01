@@ -7,7 +7,7 @@ Library    DateTime
 
 *** Keywords ***
 
-Setup Webdriver
+Setup Chrome Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
@@ -99,12 +99,23 @@ Clear, Type In And Press Enter
     Input Text    ${new_item_name}    ${text}
     Press Keys    ${new_item_name}    ENTER
 
+Send Broadcast and Verify Success
+    [Arguments]    ${element_locator}   ${success_message}
+    Click Element    ${element_locator}
+    Click Button    ${send_broadcast}
+    Wait Until Element Is Visible    ${success_sending_message}    timeout=5s
+    ${actual_message}    Get Text    ${success_sending_message}
+    Should Be Equal As Strings    ${actual_message}    ${success_message}
+    Click Element    ${close_popup_icon}
+    Wait Until Element Is Not Visible    ${success_sending_message}    timeout=5s
+
 *** Test Cases ***
 
 send textitem1 broadcast
 
-    ${test_bot}   Set Variable   Sasha-240124-brv2-api20
+    ${test_bot}   Set Variable   Sasha-240131-brv2-api10
     ${bot_names_list}   Set Variable    //table[@class='list-view']
+    ${success_message}    Set Variable   Broadcasting request has been submitted and is now processing.
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo
@@ -114,18 +125,20 @@ send textitem1 broadcast
                Open Specified Bot   ${bot_names_list}   ${test_bot}
     [Teardown]    Close Browser
 
-    Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
-    Wait Until Element Is Visible   ${users_tab}   timeout=10s
+    Wait Until Element Is Not Visible    ${loader_screen}   timeout=5s
+    Wait Until Element Is Visible   ${users_tab}   timeout=5s
     Click Element   ${users_tab}
-    Wait Until Element Is Not Visible    ${loader_screen}   timeout=15s
+    Wait Until Element Is Not Visible    ${loader_screen}   timeout=5s
     Wait Until Element Is Visible and Enabled    ${broadcast_button}  timeout=5s
     Click Button    ${broadcast_button}
     Wait Until Element Is Visible and Enabled    ${broadcast_popup}   timeout=5s
     Click Element    ${group1}
-    Wait Until Element Is Visible and Enabled    ${textitem1_br}
-    Click Element    ${textitem1_br}
-    Click Button    ${send_broadcast}
-    #Verification: check if the 'Broadcasting request has been submitted and is now processing.' is displayed.
-    Wait Until Element Is Visible    ${sucess_sending_message}   timeout=10s
-    ${actual_message}    Get Text    ${sucess_sending_message}
-    Should Be Equal As Strings    ${actual_message}   Broadcasting request has been submitted and is now processing.
+    Send Broadcast and Verify Success    ${textitem1_br}   ${success_message}
+    Send Broadcast and Verify Success    ${textitem2_br}   ${success_message}
+    Send Broadcast and Verify Success    ${carousel1_br}   ${success_message}
+    Send Broadcast and Verify Success    ${carousel2_br}   ${success_message}
+    Send Broadcast and Verify Success    ${image_carousel_br}   ${success_message}
+    Send Broadcast and Verify Success    ${flex_message_br}   ${success_message}
+    Send Broadcast and Verify Success    ${image_map_br}   ${success_message}
+    Send Broadcast and Verify Success    ${image1_br}   ${success_message}
+    Send Broadcast and Verify Success    ${video1_br}   ${success_message}

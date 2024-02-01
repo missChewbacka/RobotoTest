@@ -63,9 +63,20 @@ ${users_tab}   //a[@name='user_list_view']
 ${broadcast_button}   //button[@id='btn_broadcast']
 ${broadcast_popup}   //section[@class='broadcasting']
 ${group1_br}   (//ul[@class='groups']/li)[4]
+@{group1_item_list}   //section[@class='actions']/ul/li
 ${textitem1_br}   //h5[normalize-space()='textitem1']
+${textitem2_br}   //h5[normalize-space()='textitem2']
+${carousel1_br}   //h5[normalize-space()='carousel1']
+${carousel2_br}   //h5[normalize-space()='carousel2']
+${image_carousel_br}   //h5[normalize-space()='image_carousel']
+${flex_message_br}   //h5[normalize-space()='flex_message']
+${image_map_br}   //h5[normalize-space()='image_map']
+${image1_br}   //h5[normalize-space()='image1']
+${video1_br}   //h5[normalize-space()='video1']
+
 ${send_broadcast}   //button[@class='icon send label']
-${sucess_sending_message}    //div[@class='content']/p
+${success_sending_message}    //div[@class='content']/p
+${close_popup_icon}   (//i[@class='icon close'])[2]
 
 
 
