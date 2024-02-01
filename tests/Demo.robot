@@ -10,22 +10,11 @@ Library    DateTime
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --disable-extensions
-    Call Method    ${options}    add_experimental_option    prefs    {'device.scale_factor': 2}
+    Call Method    ${options}    add_experimental_option    prefs    {'device.scale_factor': 2, 'high-dpi-support': 1}
     Call Method    ${options}    add_experimental_option    useAutomationExtension    False
-    Call Method    ${options}    add_experimental_option    prefs    {'high-dpi-support': 1}
-    #Call Method    ${options}    add_argument    --disable-extensions
-    #Call Method    ${options}    add_experimental_option    excludeSwitches    ['enable-automation']
-    #Call Method    ${options}    add_argument    --force-device-scale-factor=2
-    #Call Method    ${options}    add_argument    --high-dpi-support=0.50
     Call Method    ${options}    add_argument    --disable-web-security
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-notifications
-    #Call Method    ${options}    add_argument    --enable-automation
-
-    #comment above lines
-    #Call Method    ${options}    add_argument    --disable-notifications
-    #Call Method    ${options}    add_argument    --disable-infobars
-    #Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --start-maximized
     Create Webdriver    Chrome    options=${options}
     Set Selenium Implicit Wait    20s
