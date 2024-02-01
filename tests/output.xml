@@ -1,97 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 11:26:42.270" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 11:30:38.155" rpa="false" schemaversion="4">
 <suite id="s1" name="Demo" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\Demo.robot">
-<test id="s1-t1" name="send textitem1 broadcast" line="96">
+<test id="s1-t1" name="send textitem1 broadcast" line="94">
 <kw name="Setup Webdriver" type="SETUP">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240201 11:26:42.470" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000269CEB2D090&gt;</msg>
-<status status="PASS" starttime="20240201 11:26:42.470" endtime="20240201 11:26:42.470"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.470" endtime="20240201 11:26:42.470"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>{'device.scale_factor': 2}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.470" endtime="20240201 11:26:42.471"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>{'high-dpi-support': 1}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.471" endtime="20240201 11:26:42.471"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>useAutomationExtension</arg>
-<arg>False</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.471" endtime="20240201 11:26:42.471"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-web-security</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.471" endtime="20240201 11:26:42.471"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.471" endtime="20240201 11:26:42.471"/>
+<msg timestamp="20240201 11:30:38.356" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021722E8D030&gt;</msg>
+<status status="PASS" starttime="20240201 11:30:38.356" endtime="20240201 11:30:38.356"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.471" endtime="20240201 11:26:42.472"/>
+<status status="PASS" starttime="20240201 11:30:38.357" endtime="20240201 11:30:38.357"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:30:38.357" endtime="20240201 11:30:38.357"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:30:38.357" endtime="20240201 11:30:38.357"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:30:38.357" endtime="20240201 11:30:38.357"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--start-maximized</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:26:42.472" endtime="20240201 11:26:42.472"/>
+<status status="PASS" starttime="20240201 11:30:38.357" endtime="20240201 11:30:38.358"/>
 </kw>
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<arg>Chrome</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pre.bonp.me//member</arg>
+<arg>chrome</arg>
 <arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240201 11:26:42.472" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<msg timestamp="20240201 11:26:45.005" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20240201 11:26:45.005" level="FAIL">InvalidArgumentException: Message: invalid argument: cannot parse capability: goog:chromeOptions
-from invalid argument: cannot parse prefs
-from invalid argument: must be a dictionary
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240201 11:30:38.358" level="INFO">Opening browser 'chrome' to base url 'https://pre.bonp.me//member'.</msg>
+<msg timestamp="20240201 11:31:41.548" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240201 11:31:41.548" level="FAIL">WebDriverException: Message: chrome not reachable
+Stacktrace:
+	GetHandleVerifier [0x00007FF658A55E42+3538674]
+	(No symbol) [0x00007FF658674C02]
+	(No symbol) [0x00007FF65852599D]
+	(No symbol) [0x00007FF6585164D0]
+	(No symbol) [0x00007FF65855B662]
+	(No symbol) [0x00007FF658555106]
+	(No symbol) [0x00007FF6585521C8]
+	(No symbol) [0x00007FF6585994B9]
+	(No symbol) [0x00007FF65858EE53]
+	(No symbol) [0x00007FF65855F514]
+	(No symbol) [0x00007FF658560631]
+	GetHandleVerifier [0x00007FF658A86CAD+3738973]
+	GetHandleVerifier [0x00007FF658ADC506+4089270]
+	GetHandleVerifier [0x00007FF658AD4823+4057299]
+	GetHandleVerifier [0x00007FF6587A5C49+720121]
+	(No symbol) [0x00007FF65868126F]
+	(No symbol) [0x00007FF65867C304]
+	(No symbol) [0x00007FF65867C432]
+	(No symbol) [0x00007FF65866BD04]
+	BaseThreadInitThunk [0x00007FFE44CC7034+20]
+	RtlUserThreadStart [0x00007FFE45442651+33]
 </msg>
-<status status="FAIL" starttime="20240201 11:26:42.472" endtime="20240201 11:26:45.007"/>
+<status status="FAIL" starttime="20240201 11:30:38.358" endtime="20240201 11:31:41.560"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1936</arg>
+<arg>1056</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240201 11:31:41.560" endtime="20240201 11:31:41.560"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>20s</arg>
+<arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20240201 11:26:45.007" endtime="20240201 11:26:45.007"/>
+<status status="NOT RUN" starttime="20240201 11:31:41.560" endtime="20240201 11:31:41.560"/>
 </kw>
-<status status="FAIL" starttime="20240201 11:26:42.469" endtime="20240201 11:26:45.007"/>
+<status status="FAIL" starttime="20240201 11:30:38.356" endtime="20240201 11:31:41.561"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240201 11:26:45.007" endtime="20240201 11:26:45.007"/>
+<status status="PASS" starttime="20240201 11:31:41.561" endtime="20240201 11:31:41.561"/>
 </kw>
 <doc>This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.</doc>
 <tag>API1.0</tag>
@@ -99,13 +102,33 @@ from invalid argument: must be a dictionary
 <tag>Demo</tag>
 <tag>New App Popup</tag>
 <tag>Regression</tag>
-<status status="FAIL" starttime="20240201 11:26:42.468" endtime="20240201 11:26:45.007">Setup failed:
-InvalidArgumentException: Message: invalid argument: cannot parse capability: goog:chromeOptions
-from invalid argument: cannot parse prefs
-from invalid argument: must be a dictionary
+<status status="FAIL" starttime="20240201 11:30:38.355" endtime="20240201 11:31:41.561">Setup failed:
+WebDriverException: Message: chrome not reachable
+Stacktrace:
+	GetHandleVerifier [0x00007FF658A55E42+3538674]
+	(No symbol) [0x00007FF658674C02]
+	(No symbol) [0x00007FF65852599D]
+	(No symbol) [0x00007FF6585164D0]
+	(No symbol) [0x00007FF65855B662]
+	(No symbol) [0x00007FF658555106]
+	(No symbol) [0x00007FF6585521C8]
+	(No symbol) [0x00007FF6585994B9]
+	(No symbol) [0x00007FF65858EE53]
+	(No symbol) [0x00007FF65855F514]
+	(No symbol) [0x00007FF658560631]
+	GetHandleVerifier [0x00007FF658A86CAD+3738973]
+	GetHandleVerifier [0x00007FF658ADC506+4089270]
+	GetHandleVerifier [0x00007FF658AD4823+4057299]
+	GetHandleVerifier [0x00007FF6587A5C49+720121]
+	(No symbol) [0x00007FF65868126F]
+	(No symbol) [0x00007FF65867C304]
+	(No symbol) [0x00007FF65867C432]
+	(No symbol) [0x00007FF65866BD04]
+	BaseThreadInitThunk [0x00007FFE44CC7034+20]
+	RtlUserThreadStart [0x00007FFE45442651+33]
 </status>
 </test>
-<status status="FAIL" starttime="20240201 11:26:42.271" endtime="20240201 11:26:45.008"/>
+<status status="FAIL" starttime="20240201 11:30:38.156" endtime="20240201 11:31:41.562"/>
 </suite>
 <statistics>
 <total>

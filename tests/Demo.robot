@@ -15,7 +15,7 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --start-maximized
     Open Browser    https://pre.bonp.me//member    chrome    options=${options}
-    Set Window Size    1936    1056
+    #Set Window Size    1936    1056
     Set Selenium Implicit Wait    15s
 
 Login
