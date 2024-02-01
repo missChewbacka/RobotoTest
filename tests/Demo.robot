@@ -12,10 +12,11 @@ Setup Webdriver
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_experimental_option    prefs    {'device.scale_factor': 2}
     Call Method    ${options}    add_experimental_option    useAutomationExtension    False
+    Call Method    ${options}    add_experimental_option    prefs    {'high-dpi-support': 1}
     #Call Method    ${options}    add_argument    --disable-extensions
     #Call Method    ${options}    add_experimental_option    excludeSwitches    ['enable-automation']
     #Call Method    ${options}    add_argument    --force-device-scale-factor=2
-    Call Method    ${options}    add_argument    --high-dpi-support=0.50
+    #Call Method    ${options}    add_argument    --high-dpi-support=0.50
     Call Method    ${options}    add_argument    --disable-web-security
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-notifications
