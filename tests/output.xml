@@ -1,68 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 11:01:11.250" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 11:15:20.636" rpa="false" schemaversion="4">
 <suite id="s1" name="Demo" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\Demo.robot">
-<test id="s1-t1" name="send textitem1 broadcast" line="96">
+<test id="s1-t1" name="send textitem1 broadcast" line="100">
 <kw name="Setup Webdriver" type="SETUP">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240201 11:01:11.458" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027443D49000&gt;</msg>
-<status status="PASS" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.458"/>
+<msg timestamp="20240201 11:15:20.852" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000257D6ACD090&gt;</msg>
+<status status="PASS" starttime="20240201 11:15:20.851" endtime="20240201 11:15:20.852"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>--headless</arg>
+<arg>--disable-web-security</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.459"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--window-size=1920,1080</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20240201 11:01:11.459" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
-<status status="FAIL" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
+<status status="PASS" starttime="20240201 11:15:20.852" endtime="20240201 11:15:20.852"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
+<status status="PASS" starttime="20240201 11:15:20.852" endtime="20240201 11:15:20.852"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:15:20.853" endtime="20240201 11:15:20.853"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:15:20.853" endtime="20240201 11:15:20.853"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--enable-automation</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240201 11:15:20.853" endtime="20240201 11:15:20.854"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--force-device-scale-factor=0.50</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20240201 11:15:20.854" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--force-device-scale-factor'</msg>
+<status status="FAIL" starttime="20240201 11:15:20.854" endtime="20240201 11:15:20.854"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--high-dpi-support=0.50</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 11:15:20.854" endtime="20240201 11:15:20.854"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 11:15:20.854" endtime="20240201 11:15:20.854"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="NOT RUN" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
+<status status="NOT RUN" starttime="20240201 11:15:20.854" endtime="20240201 11:15:20.854"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
+<status status="NOT RUN" starttime="20240201 11:15:20.855" endtime="20240201 11:15:20.855"/>
 </kw>
-<status status="FAIL" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.460"/>
+<status status="FAIL" starttime="20240201 11:15:20.851" endtime="20240201 11:15:20.855"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
+<status status="PASS" starttime="20240201 11:15:20.855" endtime="20240201 11:15:20.855"/>
 </kw>
 <doc>This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.</doc>
 <tag>API1.0</tag>
@@ -70,10 +91,10 @@
 <tag>Demo</tag>
 <tag>New App Popup</tag>
 <tag>Regression</tag>
-<status status="FAIL" starttime="20240201 11:01:11.457" endtime="20240201 11:01:11.460">Setup failed:
-Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+<status status="FAIL" starttime="20240201 11:15:20.850" endtime="20240201 11:15:20.855">Setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--force-device-scale-factor'</status>
 </test>
-<status status="FAIL" starttime="20240201 11:01:11.251" endtime="20240201 11:01:11.461"/>
+<status status="FAIL" starttime="20240201 11:15:20.638" endtime="20240201 11:15:20.856"/>
 </suite>
 <statistics>
 <total>
