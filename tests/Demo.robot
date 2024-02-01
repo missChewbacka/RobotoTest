@@ -10,7 +10,8 @@ Library    DateTime
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method    ${options}    add_argument    --disable-extensions
-    Call Method    ${options}    add_experimental_option    prefs    {'device.scale_factor': 2, 'high-dpi-support': 1}
+    Call Method    ${options}    add_experimental_option    prefs    {'device.scale_factor': 2}
+    Call Method    ${options}    add_experimental_option    prefs    {'high-dpi-support': 1}
     Call Method    ${options}    add_experimental_option    useAutomationExtension    False
     Call Method    ${options}    add_argument    --disable-web-security
     Call Method    ${options}    add_argument    --disable-infobars
