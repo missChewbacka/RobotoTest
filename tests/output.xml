@@ -1,93 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240129 21:07:10.461" rpa="false" schemaversion="4">
-<suite id="s1" name="TestCaseSet" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\TestCaseSet.robot">
-<test id="s1-t1" name="send textitem1 broadcast jenkins" line="502">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 10:27:32.220" rpa="false" schemaversion="4">
+<suite id="s1" name="Demo" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\Demo.robot">
+<test id="s1-t1" name="send textitem1 broadcast" line="99">
 <kw name="Setup Webdriver" type="SETUP">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240129 21:07:10.676" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001521125DE40&gt;</msg>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<msg timestamp="20240201 10:27:32.386" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000023F7EBB55D0&gt;</msg>
+<status status="PASS" starttime="20240201 10:27:32.386" endtime="20240201 10:27:32.386"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>--disable-notifications</arg>
+<arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<status status="PASS" starttime="20240201 10:27:32.386" endtime="20240201 10:27:32.386"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>--disable-infobars</arg>
+<arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extensions</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--no-sandbox</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-dev-shm-usage</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<status status="PASS" starttime="20240201 10:27:32.386" endtime="20240201 10:27:32.386"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--window-size=1920,1080</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20240129 21:07:10.676" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
-<status status="FAIL" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<msg timestamp="20240201 10:27:32.387" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
+<status status="FAIL" starttime="20240201 10:27:32.386" endtime="20240201 10:27:32.387"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://pre.bonp.me//member</arg>
-<arg>chrome</arg>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
 <arg>options=${options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
-</kw>
-<kw name="Set Window Size" library="SeleniumLibrary">
-<arg>1980</arg>
-<arg>1080</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="NOT RUN" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>15s</arg>
+<arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<status status="NOT RUN" starttime="20240201 10:27:32.387" endtime="20240201 10:27:32.387"/>
 </kw>
-<status status="FAIL" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<status status="FAIL" starttime="20240201 10:27:32.385" endtime="20240201 10:27:32.387"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240129 21:07:10.676" endtime="20240129 21:07:10.676"/>
+<status status="PASS" starttime="20240201 10:27:32.388" endtime="20240201 10:27:32.388"/>
 </kw>
 <doc>This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.</doc>
 <tag>API1.0</tag>
 <tag>Broadcast</tag>
-<tag>Demo_test</tag>
+<tag>Demo</tag>
 <tag>New App Popup</tag>
 <tag>Regression</tag>
-<status status="FAIL" starttime="20240129 21:07:10.675" endtime="20240129 21:07:10.676">Setup failed:
+<status status="FAIL" starttime="20240201 10:27:32.384" endtime="20240201 10:27:32.388">Setup failed:
 Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </test>
-<status status="FAIL" starttime="20240129 21:07:10.461" endtime="20240129 21:07:10.676"/>
+<status status="FAIL" starttime="20240201 10:27:32.221" endtime="20240201 10:27:32.390"/>
 </suite>
 <statistics>
 <total>
@@ -96,12 +103,12 @@ Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got a
 <tag>
 <stat pass="0" fail="1" skip="0">API1.0</stat>
 <stat pass="0" fail="1" skip="0">Broadcast</stat>
-<stat pass="0" fail="1" skip="0">Demo_test</stat>
+<stat pass="0" fail="1" skip="0">Demo</stat>
 <stat pass="0" fail="1" skip="0">New App Popup</stat>
 <stat pass="0" fail="1" skip="0">Regression</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TestCaseSet">TestCaseSet</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo">Demo</stat>
 </suite>
 </statistics>
 <errors>

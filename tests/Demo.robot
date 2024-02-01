@@ -10,11 +10,15 @@ Library    DateTime
 Setup Webdriver
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     #Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    add_argument    --window-size=1920,1080
+    #comment 3 above lines
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --start-maximized
+    #Call Method    ${options}    add_argument    --start-maximized
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Create Webdriver    Chrome    options=${options}
     Set Selenium Implicit Wait    20s
@@ -99,6 +103,7 @@ send textitem1 broadcast
 
     [Documentation]    This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.
     [Tags]   New App Popup   API1.0   Regression   Broadcast   Demo
+
     [Setup]    Setup Webdriver
                Login   ${credentials}[email]   ${credentials}[password]
                Open Specified Bot   ${bot_names_list}   ${test_bot}
