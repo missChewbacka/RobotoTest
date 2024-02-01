@@ -1,47 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 10:58:52.904" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.10 on win32)" generated="20240201 11:01:11.250" rpa="false" schemaversion="4">
 <suite id="s1" name="Demo" source="C:\Users\Professional\PycharmProjects\RobotDemo\tests\Demo.robot">
-<test id="s1-t1" name="send textitem1 broadcast" line="97">
+<test id="s1-t1" name="send textitem1 broadcast" line="96">
 <kw name="Setup Webdriver" type="SETUP">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240201 10:58:53.107" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001AB8109CF70&gt;</msg>
-<status status="PASS" starttime="20240201 10:58:53.107" endtime="20240201 10:58:53.107"/>
+<msg timestamp="20240201 11:01:11.458" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027443D49000&gt;</msg>
+<status status="PASS" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.458"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240201 10:58:53.107" endtime="20240201 10:58:53.108"/>
+<status status="PASS" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.459"/>
 </kw>
-<kw name="Set Window Size" library="SeleniumLibrary">
-<arg>1936</arg>
-<arg>1056</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<msg timestamp="20240201 10:58:53.108" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20240201 10:58:53.108" level="FAIL">No browser is open.</msg>
-<status status="FAIL" starttime="20240201 10:58:53.108" endtime="20240201 10:58:53.110"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20240201 11:01:11.459" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
+<status status="FAIL" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20240201 11:01:11.459" endtime="20240201 11:01:11.459"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="NOT RUN" starttime="20240201 10:58:53.110" endtime="20240201 10:58:53.110"/>
+<status status="NOT RUN" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20240201 10:58:53.110" endtime="20240201 10:58:53.110"/>
+<status status="NOT RUN" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
 </kw>
-<status status="FAIL" starttime="20240201 10:58:53.107" endtime="20240201 10:58:53.110"/>
+<status status="FAIL" starttime="20240201 11:01:11.458" endtime="20240201 11:01:11.460"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240201 10:58:53.110" endtime="20240201 10:58:53.111"/>
+<status status="PASS" starttime="20240201 11:01:11.460" endtime="20240201 11:01:11.460"/>
 </kw>
 <doc>This test sends a broadcast message (textitem1) to all users using regular broadcasting functionality.</doc>
 <tag>API1.0</tag>
@@ -49,10 +70,10 @@
 <tag>Demo</tag>
 <tag>New App Popup</tag>
 <tag>Regression</tag>
-<status status="FAIL" starttime="20240201 10:58:53.106" endtime="20240201 10:58:53.111">Setup failed:
-No browser is open.</status>
+<status status="FAIL" starttime="20240201 11:01:11.457" endtime="20240201 11:01:11.460">Setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </test>
-<status status="FAIL" starttime="20240201 10:58:52.905" endtime="20240201 10:58:53.111"/>
+<status status="FAIL" starttime="20240201 11:01:11.251" endtime="20240201 11:01:11.461"/>
 </suite>
 <statistics>
 <total>
